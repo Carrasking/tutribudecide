@@ -1,0 +1,51 @@
+{
+  "actualizado": "2026-11-09",
+  "dia": 0,
+  "poblacion": 0,
+  "tribu": null,
+  "aldea": null,
+  "era": "piedra",
+  "fuego": false,
+  "investigando": { "es": "El fuego", "en": "Fire" },
+  "votacion": {
+    "es": "¿Cómo se llamará la tribu? Comenta tu idea y dale like a tu favorita.",
+    "en": "What will the tribe be called? Comment your idea and like your favorite.",
+    "url_es": "https://www.tiktok.com/@tutribudecide",
+    "url_en": "https://www.tiktok.com/@yourtribedecides"
+  },
+  "tienda": "https://hoo.be/exzards",
+  "historia": [
+    { "dia": 0, "es": "Exzards aparece solo en un valle vacío y funda la tribu. Los primeros en comentar se unen.", "en": "Exzards appears alone in an empty valley and founds the tribe. The first commenters join." }
+  ],
+  "jefe": { "usuario": "Exzards", "piel": "#F0B088", "pelo": "#5A341C", "ropa": "#9A6232" },
+  "miembros": [
+    {
+      "usuario": "germancn__", "rol": "cazador", "desde": 0,
+      "piel": "#C98A5E", "pelo": "#2E1C10", "ropa": "#8C6A3A",
+      "mascota": { "tipo": "tigre", "nombre": "" },
+      "papel": { "es": "Cazador con su tigre dientes de sable", "en": "Hunter with a sabertooth tiger" }
+    },
+    {
+      "usuario": "rasche_rena", "rol": "fuego", "desde": 0,
+      "piel": "#F5C9A0", "pelo": "#C0502A", "ropa": "#7E8C3A",
+      "papel": { "es": "Nómada que busca el fuego", "en": "Nomad searching for fire" }
+    },
+    {
+      "usuario": "j8menezluquina8ciakassandra", "rol": "hogar", "desde": 0, "pelo_largo": true,
+      "piel": "#E8A87C", "pelo": "#1E120A", "ropa": "#B5783E",
+      "mascota": { "tipo": "perro", "nombre": "Canelita" }, "casa": true,
+      "papel": { "es": "Vive en su choza con su perrita Canelita", "en": "Lives in a hut with a pup named Canelita" }
+    },
+    {
+      "usuario": "qwerty983251", "rol": "agua", "desde": 0,
+      "piel": "#D9966A", "pelo": "#3B2414", "ropa": "#6E8FA8",
+      "papel": { "es": "Trae agua del río. Propuso el nombre «Los Invencibles»", "en": "Brings water from the river. Suggested the name «Los Invencibles»" }
+    },
+    {
+      "usuario": "el_tiziano_2026", "rol": "bayas", "desde": 0,
+      "piel": "#F2B38A", "pelo": "#7A4A22", "ropa": "#A0522D",
+      "papel": { "es": "Recolector de bayas. Propuso el nombre «Los Picardos» para la aldea", "en": "Berry gatherer. Suggested «Los Picardos» as the village name" }
+    }
+  ],
+  "aldeanos_genericos": 10
+}
