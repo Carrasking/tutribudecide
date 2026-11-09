@@ -100,6 +100,10 @@ header{display:flex;align-items:center;justify-content:space-between;gap:12px;fl
 .feed button{all:unset;cursor:pointer;font-weight:900;overflow-wrap:anywhere;border-bottom:2px solid var(--sun)}
 .feed li.event{background:var(--sun);border:2px solid var(--ink);border-radius:10px;padding:4px 8px;font-weight:800}
 .vote p{margin:0;font-size:16px;font-weight:800}
+.vote p.note{font-size:14px;font-weight:600}
+.vlinks{display:flex;gap:8px;flex-wrap:wrap}
+.vlinks .btn{font-size:15px;padding:6px 13px}
+.btn.tt{background:#2B1B12;color:#fff}.btn.ig{background:#D6336C}.btn.yt{background:#E5402A}
 .bar{height:18px;border:3px solid var(--ink);border-radius:999px;background:#fff;overflow:hidden}
 .bar i{display:block;height:100%;background:repeating-linear-gradient(-45deg,var(--ember) 0 10px,#FFA640 10px 20px);width:12%}
 .story{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
@@ -165,9 +169,10 @@ svg text.sign{font:400 22px var(--display);fill:var(--sun);stroke:var(--ink);str
     <section class="card vote" aria-labelledby="t-vote">
       <h2 id="t-vote">🗳️ <span data-t="vote">Votación de hoy</span></h2>
       <p id="vote-q"></p>
-      <div><a class="btn green" id="vote-link" href="#" target="_blank" rel="noopener">💬 <span data-t="votebtn">Vota en el video</span></a></div>
+      <p class="note" data-t="votewhere">Comenta 1 o 2 en el último video, en cualquiera de nuestras redes:</p>
+      <div class="vlinks" id="vote-links"></div>
       <div>
-        <p class="note"><span data-t="research">Investigando</span>: <b id="research"></b></p>
+        <p class="note"><span data-t="research">Investigando</span>: <b id="research"></b> · <span id="research-left"></span></p>
         <div class="bar" aria-hidden="true"><i id="research-bar"></i></div>
       </div>
     </section>
@@ -182,7 +187,7 @@ svg text.sign{font:400 22px var(--display);fill:var(--sun);stroke:var(--ink);str
 </div>
 
 <script id="datos-respaldo" type="application/json">
-{"actualizado":"2026-11-09","dia":0,"poblacion":0,"tribu":null,"aldea":null,"era":"piedra","fuego":false,"investigando":{"es":"El fuego","en":"Fire"},"votacion":{"es":"¿Cómo se llamará la tribu? Comenta tu idea y dale like a tu favorita.","en":"What will the tribe be called? Comment your idea and like your favorite.","url_es":"https://www.tiktok.com/@tutribudecide","url_en":"https://www.tiktok.com/@yourtribedecides"},"tienda":"https://hoo.be/exzards","historia":[{"dia":0,"es":"Exzards aparece solo en un valle vacío y funda la tribu. Los primeros en comentar se unen.","en":"Exzards appears alone in an empty valley and founds the tribe. The first commenters join."}],"jefe":{"usuario":"Exzards","piel":"#F0B088","pelo":"#5A341C","ropa":"#9A6232"},"miembros":[],"aldeanos_genericos":10}
+{"actualizado":"2026-11-09","dia":1,"poblacion":48,"tribu":null,"aldea":null,"era":"piedra","fuego":false,"investigando":{"es":"El fuego","en":"Fire","inicio":"2026-11-09","dias":7},"votacion":{"es":"Día 1: ¿dónde dormimos? 1 = explorar el fondo de la cueva · 2 = construir chozas junto al río. Y sigue abierto el nombre de la tribu.","en":"Day 1: where do we sleep? 1 = explore the back of the cave · 2 = build huts by the river. The tribe name vote is still open.","redes_es":[{"red":"TikTok","url":"https://www.tiktok.com/@.exzards"},{"red":"Instagram","url":"https://www.instagram.com/tutribudecide/"},{"red":"YouTube","url":"https://www.youtube.com/@tutribudecide"}],"redes_en":[{"red":"TikTok","url":"https://www.tiktok.com/@.exzards"},{"red":"Instagram","url":"https://www.instagram.com/yourtribedecides/"},{"red":"YouTube","url":"https://www.youtube.com/@yourtribedecides"}],"url_es":"https://www.tiktok.com/@.exzards","url_en":"https://www.tiktok.com/@.exzards"},"tienda":"https://hoo.be/exzards","historia":[{"dia":0,"es":"Exzards aparece solo en un valle vacío y funda la tribu. Los primeros en comentar se unen.","en":"Exzards appears alone in an empty valley and founds the tribe. The first commenters join."},{"dia":1,"es":"Llegan los 18 primeros de la tribu. Nadie gana el nombre todavía y empieza la búsqueda del fuego.","en":"The first 18 members arrive. No tribe name wins yet, and the search for fire begins."}],"jefe":{"usuario":"Exzards","piel":"#F0B088","pelo":"#5A341C","ropa":"#9A6232"},"miembros":[{"usuario":"germancn__","rol":"cazador","desde":0,"piel":"#C98A5E","pelo":"#2E1C10","ropa":"#8C6A3A","mascota":{"tipo":"tigre","nombre":""},"papel":{"es":"Cazador con su tigre dientes de sable","en":"Hunter with a sabertooth tiger"}},{"usuario":"rasche_rena","rol":"fuego","desde":0,"piel":"#F5C9A0","pelo":"#C0502A","ropa":"#7E8C3A","papel":{"es":"Nómada que busca el fuego","en":"Nomad searching for fire"}},{"usuario":"j8menezluquina8ciakassandra","rol":"hogar","desde":0,"pelo_largo":true,"piel":"#E8A87C","pelo":"#1E120A","ropa":"#B5783E","mascota":{"tipo":"perro","nombre":"Canelita"},"casa":true,"papel":{"es":"Vive en su choza con su perrita Canelita","en":"Lives in a hut with a pup named Canelita"}},{"usuario":"qwerty983251","rol":"agua","desde":0,"piel":"#D9966A","pelo":"#3B2414","ropa":"#6E8FA8","papel":{"es":"Trae agua del río. Propuso el nombre «Los Invencibles»","en":"Brings water from the river. Suggested the name «Los Invencibles»"}},{"usuario":"el_tiziano_2026","rol":"bayas","desde":0,"piel":"#F2B38A","pelo":"#7A4A22","ropa":"#A0522D","papel":{"es":"Recolector de bayas. Propuso el nombre «Los Picardos» para la aldea","en":"Berry gatherer. Suggested «Los Picardos» as the village name"}},{"usuario":"el.dante2.0","rol":"piedras","desde":0,"piel":"#E2A47A","pelo":"#3B2414","ropa":"#8E8A82","papel":{"es":"Junta piedras para las herramientas. Propuso el nombre «Cejas YT»","en":"Gathers stones for tools. Suggested the name «Cejas YT»"}},{"usuario":"777_chati_cr_23","rol":"cazador","desde":0,"piel":"#C98A5E","pelo":"#4A2C17","ropa":"#E07A2A","mascota":{"tipo":"tigre","nombre":"","bebe":true},"papel":{"es":"Cazador con su cachorro de dientes de sable","en":"Hunter with a sabertooth cub"}},{"usuario":"marrmarr556","rol":"bayas","desde":0,"piel":"#F5C9A0","pelo":"#6B3A1E","ropa":"#A0522D","papel":{"es":"Recolecta bayas. De los primeros en seguir a la tribu","en":"Picks berries. One of the very first followers"}},{"usuario":"bannana7-k","rol":"agua","desde":0,"piel":"#D9966A","pelo":"#2E1C10","ropa":"#4A7FB0","papel":{"es":"Trae agua del río","en":"Brings water from the river"}},{"usuario":"jum-v7j","rol":"bayas","desde":0,"piel":"#F0B088","pelo":"#8A4A22","ropa":"#4A7FB0","papel":{"es":"Recolecta bayas","en":"Picks berries"}},{"usuario":"Br0ken_sp5wn","rol":"agua","desde":0,"piel":"#C98A5E","pelo":"#1E120A","ropa":"#8E8A82","papel":{"es":"Trae agua del río","en":"Brings water from the river"}},{"usuario":"DEKU-c9z","rol":"bayas","desde":0,"piel":"#E8A87C","pelo":"#1E120A","ropa":"#7A5A32","papel":{"es":"Recolecta bayas. Propuso «La Tribu de los Leones»","en":"Picks berries. Suggested «La Tribu de los Leones»"}},{"usuario":"juanfer0138","rol":"piedras","desde":0,"piel":"#F2B38A","pelo":"#3B2414","ropa":"#E07A2A","mascota":{"tipo":"loro","nombre":""},"papel":{"es":"Junta piedras con su loro","en":"Gathers stones with their parrot"}},{"usuario":"noob6-y8h","rol":"cazador","desde":0,"piel":"#D9966A","pelo":"#5A341C","ropa":"#4A7FB0","mascota":{"tipo":"mamut","nombre":""},"papel":{"es":"Cazador con su mamut bebé. Su humilde choza es el suelo","en":"Hunter with a baby mammoth. Their humble hut is the ground"}},{"usuario":"Leila.alegriaAlegria","rol":"piedras","desde":0,"piel":"#F5C9A0","pelo":"#7A4A22","ropa":"#8E8A82","mascota":{"tipo":"trex","nombre":""},"papel":{"es":"«El Grasa». Junta piedras con su T-rex bebé","en":"«El Grasa». Gathers stones with a baby T-rex"}},{"usuario":"DLS_omarc78","rol":"cazador","desde":0,"piel":"#C98A5E","pelo":"#2E1C10","ropa":"#A0522D","mascota":{"tipo":"lobo","nombre":"Zeus"},"papel":{"es":"Cazador con su lobo Zeus. Lo encontró cazando. Propuso «Generación Z»","en":"Hunter with a wolf named Zeus, found while hunting. Suggested «Generación Z»"}},{"usuario":"ThiagoPeña-q5c","rol":"agua","desde":0,"piel":"#E2A47A","pelo":"#4A2C17","ropa":"#4A7FB0","papel":{"es":"Trae agua del río","en":"Brings water from the river"}},{"usuario":"cuydoro","rol":"bayas","desde":0,"pelo_largo":true,"piel":"#F0B088","pelo":"#6B3A1E","ropa":"#8E8A82","mascota":{"tipo":"gato","nombre":"Leo"},"papel":{"es":"Recolecta bayas con su gato montés Leo","en":"Picks berries with a wildcat named Leo"}}],"aldeanos_genericos":29}
 </script>
 
 <script>
@@ -190,7 +195,8 @@ svg text.sign{font:400 22px var(--display);fill:var(--sun);stroke:var(--ink);str
 "use strict";
 const NS='http://www.w3.org/2000/svg';
 const INK='#2B1B12';
-const WW=2800,H=1000;
+// Mundo: [0, OX) zona de construcción · [OX, OX+2800) el valle original · [OX+2800, WW) bosque profundo y montañas
+const OX=900,WW=5300,H=1000;
 const svg=document.getElementById('world');
 const stage=document.getElementById('stage');
 let LANG='es';
@@ -205,7 +211,10 @@ const STR={
   logo:'TU TRIBU <span>DECIDE</span>',aria:'Aldea en vivo de la tribu',user:'Usuario',leave:'Salir de la cueva',goto:'Ir a',
   caveTitle:'Dentro de la cueva · {n} durmiendo',caveDay:'Dentro de la cueva',caveEmpty:'De día todos trabajan afuera. La tribu entra a dormir a las 21:00 (en {m} min).',
   sleepers:'💤 {n} — toca para entrar',mammoth:'🦣 ¡Apareció un mamut! Los cazadores van por él',carry:'💪 Los cazadores traen el mamut a la aldea',feast:'🍖 ¡Festín en la aldea! Todos comen',see:'Ver 👀',
-  zones:{caza:'🦣 Llanura de caza',cueva:'🪨 Cueva',aldea:'🔥 Aldea',rio:'💧 Río',bosque:'🌲 Bosque'},left:'Mover a la izquierda',right:'Mover a la derecha'},
+  zones:{obra:'🏗️ Construcción',caza:'🦣 Llanura de caza',cueva:'🪨 Cueva',aldea:'🔥 Aldea',rio:'💧 Río',bosque:'🌲 Bosque profundo',montana:'⛰️ Montañas'},left:'Mover a la izquierda',right:'Mover a la derecha',
+  devT:'ZONA DE CONSTRUCCIÓN',devS:'Pronto: construye aquí',lot:'LIBRE',
+  votewhere:'Comenta 1 o 2 en el último video, en cualquiera de nuestras redes:',leftD:'faltan {n} días',leftD1:'falta 1 día',leftH:'faltan {n} horas',done:'¡casi listo! Se revela en el próximo video',
+  pets:{tigre:'su tigre dientes de sable',tigreB:'su cachorro de dientes de sable',perro:'su perrita',loro:'su loro',mamut:'su mamut bebé',trex:'su T-rex bebé',lobo:'su lobo',gato:'su gato montés'}},
  en:{shop:'Upgrade your caveman',day:'Day',pop:'Population',tribe:'Tribe',noname:'No name yet',all:'See the whole village',find:'Find your caveman',go:'Search',
   tap:"Tap a caveman to follow them. At night everyone is in the cave: tap it to go inside.",live:'Live now',vote:"Today's vote",votebtn:'Vote in the video',research:'Researching',story:'The story so far',
   foot:'The village lives on its own: 1 real minute is 1 hour in the tribe. Everyone sees the same thing at the same time. Drag the map to see the sides.',updated:'Updated',
@@ -214,9 +223,12 @@ const STR={
   logo:'YOUR TRIBE <span>DECIDES</span>',aria:'Live tribe village',user:'Username',leave:'Leave the cave',goto:'Go to',
   caveTitle:'Inside the cave · {n} sleeping',caveDay:'Inside the cave',caveEmpty:'During the day everyone works outside. The tribe goes to sleep at 21:00 (in {m} min).',
   sleepers:'💤 {n} — tap to go in',mammoth:'🦣 A mammoth appeared! The hunters are going after it',carry:'💪 The hunters carry the mammoth to the village',feast:'🍖 Feast in the village! Everyone eats',see:'Watch 👀',
-  zones:{caza:'🦣 Hunting plains',cueva:'🪨 Cave',aldea:'🔥 Village',rio:'💧 River',bosque:'🌲 Forest'},left:'Move left',right:'Move right'}
+  zones:{obra:'🏗️ Building zone',caza:'🦣 Hunting plains',cueva:'🪨 Cave',aldea:'🔥 Village',rio:'💧 River',bosque:'🌲 Deep forest',montana:'⛰️ Mountains'},left:'Move left',right:'Move right',
+  devT:'BUILDING ZONE',devS:'Coming soon: build here',lot:'FREE',
+  votewhere:'Comment 1 or 2 on the latest video, on any of our accounts:',leftD:'{n} days left',leftD1:'1 day left',leftH:'{n} hours left',done:'almost ready! Revealed in the next video',
+  pets:{tigre:'their sabertooth tiger',tigreB:'their sabertooth cub',perro:'their pup',loro:'their parrot',mamut:'their baby mammoth',trex:'their baby T-rex',lobo:'their wolf',gato:'their wildcat'}}
 };
-const ZONES={caza:330,cueva:930,aldea:1480,rio:2150,bosque:2540};
+const ZONES={obra:440,caza:330+OX,cueva:930+OX,aldea:1480+OX,rio:2150+OX,bosque:3900,montana:4800};
 const PLACE={
  plains1:{x:250,y:770,es:'la llanura',en:'the plains'},
  plains2:{x:470,y:880,es:'la llanura',en:'the plains'},
@@ -236,7 +248,18 @@ const PLACE={
  edgeE:{x:2760,y:800,es:'el borde del bosque',en:'the edge of the forest'},
  edgeW:{x:40,y:840,es:'el borde del valle',en:'the edge of the valley'}
 };
-const DOOR={x:930,y:622};
+for(const k in PLACE)PLACE[k].x+=OX;
+Object.assign(PLACE,{
+ obra1:{x:300,y:730,es:'la zona de construcción',en:'the building zone'},
+ obra2:{x:640,y:900,es:'la zona de construcción',en:'the building zone'},
+ devsign:{x:470,y:600,es:'el cartel de la zona de construcción',en:'the building zone sign'},
+ deep1:{x:3930,y:770,es:'el bosque profundo',en:'the deep forest'},
+ deep2:{x:4180,y:890,es:'el bosque profundo',en:'the deep forest'},
+ montPie:{x:4440,y:900,es:'el pie de la montaña',en:'the foot of the mountain'},
+ montCamino:{x:4720,y:565,es:'el sendero de la montaña',en:'the mountain trail'},
+ cumbre:{x:4985,y:285,es:'la cumbre',en:'the summit'}
+});
+const DOOR={x:930+OX,y:622};
 const ACT={
  mandar:{em:'📣',es:'{u} da órdenes desde la roca',en:'{u} gives orders from the rock'},
  revisar:{em:'👀',es:'{u} revisa cómo va la aldea',en:'{u} checks on the village'},
@@ -263,16 +286,28 @@ const ACT={
  comer:{em:'🍖',es:'{u} come mamut en el festín',en:'{u} eats mammoth at the feast'},
  herramientas:{em:'🔨',es:'',en:''},pintar:{em:'🎨',es:'',en:''},lena:{em:'🪵',es:'',en:''},pescar:{em:'🎣',es:'',en:''},
  pieles:{em:'🧶',es:'',en:''},piedras:{em:'🪨',es:'',en:''},sentado:{em:'',es:'',en:''},bostezo:{em:'🥱',es:'',en:''},nubes:{em:'☁️',es:'',en:''},
- walk:{em:'🚶',es:'{u} camina hacia {l}',en:'{u} walks to {l}'}
+ walk:{em:'🚶',es:'{u} camina hacia {l}',en:'{u} walks to {l}'},
+ juntar:{em:'🪨',es:'{u} junta piedras para herramientas{p}',en:'{u} gathers stones for tools{p}'},
+ planear:{em:'📐',es:'{u} planea lo que la tribu construirá en el futuro',en:'{u} plans what the tribe will build in the future'},
+ medir:{em:'📐',es:'',en:''},troncos:{em:'🪵',es:'',en:''},explorarM:{em:'⛰️',es:'',en:''},animal:{em:'',es:'',en:''},
+ cazarB:{em:'🏹',es:'{u} caza en el bosque profundo{p}',en:'{u} hunts in the deep forest{p}'},
+ recolectar:{em:'🍄',es:'{u} busca hongos en el bosque profundo{p}',en:'{u} looks for mushrooms in the deep forest{p}'},
+ pedernal:{em:'⛰️',es:'{u} busca piedras de chispa en la montaña',en:'{u} looks for spark stones on the mountain'},
+ mirar:{em:'🔭',es:'{u} mira todo el valle desde la cumbre',en:'{u} looks over the whole valley from the summit'},
+ irChoza:{em:'🛖',es:'{u} vuelve a su choza a dormir',en:'{u} heads back to their hut to sleep'},
+ dormirChoza:{em:'💤',es:'{u} duerme en su choza{p}',en:'{u} sleeps in their hut{p}'},
+ despertarChoza:{em:'🌅',es:'{u} sale de su choza',en:'{u} comes out of their hut'}
 };
 const ROLE={
- jefe:[['rock',16,'mandar'],['pit',8,'revisar'],['river',8,'beber'],['quarry',6,'revisar'],['rock',10,'mandar'],['meadow',6,'revisar']],
- cazador:[['plains1',18,'rastrear'],['forest',16,'cazar'],['pit',8,'carne'],['cave',7,'guardar'],['river',6,'beber']],
- fuego:[['pit',22,'chispas'],['edgeE',12,'explorar'],['river2',5,'beber'],['pit',16,'chispas'],['edgeW',12,'explorar']],
+ jefe:[['rock',16,'mandar'],['pit',8,'revisar'],['river',8,'beber'],['quarry',6,'revisar'],['rock',10,'mandar'],['plains2',4,'revisar'],['obra1',14,'planear'],['meadow',6,'revisar']],
+ cazador:[['plains1',18,'rastrear'],['forest',16,'cazar'],['deep1',16,'cazarB'],['pit',8,'carne'],['cave',7,'guardar'],['river',6,'beber']],
+ fuego:[['pit',22,'chispas'],['montCamino',16,'pedernal'],['river2',5,'beber'],['pit',16,'chispas'],['edgeW',12,'explorar']],
  agua:[['river',16,'agua'],['cave',7,'dejar'],['river2',14,'agua'],['cave',7,'dejar']],
- bayas:[['berries',16,'bayas'],['berries2',14,'bayas'],['cave',6,'guardar'],['meadow',6,'revisar']],
- hogar:[['hut',18,'choza'],['meadow',10,'pasear'],['berries2',10,'bayas'],['river2',8,'beber']]
+ bayas:[['berries',16,'bayas'],['berries2',14,'bayas'],['cave',6,'guardar'],['deep2',12,'recolectar'],['meadow',6,'revisar']],
+ hogar:[['hut',18,'choza'],['meadow',10,'pasear'],['berries2',10,'bayas'],['river2',8,'beber']],
+ piedras:[['quarry',18,'juntar'],['cave',7,'guardar'],['montPie',14,'juntar'],['quarry',14,'juntar'],['river',6,'beber']]
 };
+const PET_EM={tigre:'🐯',perro:'🐕',loro:'🦜',mamut:'🦣',trex:'🦖',lobo:'🐺',gato:'🐱'};
 const GEN_TASKS=[
  [['quarry',12,'herramientas'],['cave',6,'piedras']],
  [['cave',16,'pintar'],['meadow',8,'nubes']],
@@ -281,13 +316,17 @@ const GEN_TASKS=[
  [['meadow',14,'sentado'],['pond',10,'bostezo']],
  [['berries',12,'bayas'],['quarry',8,'piedras']],
  [['pond',14,'pieles'],['cave',8,'sentado']],
- [['plains2',14,'rastrear'],['quarry',8,'herramientas']]
+ [['plains2',14,'rastrear'],['quarry',8,'herramientas']],
+ [['obra1',16,'medir'],['obra2',12,'troncos']],
+ [['montCamino',14,'explorarM'],['cumbre',12,'nubes']],
+ [['deep2',16,'lena'],['deep1',10,'recolectar']],
+ [['obra2',14,'troncos'],['devsign',8,'sentado']]
 ];
 const SPEED=72;
 const NIGHT_START=21*60,NIGHT_END=5*60,TRANS=10;
 // mammoth hunt: every P seconds, only if it starts in daytime
 const P=420,EV0=45,EVLEN=106;
-const M_SPOT={x:340,y:780},FEAST={x:1270,y:810},PITC={x:1500,y:770};
+const M_SPOT={x:340+OX,y:780},FEAST={x:1270+OX,y:810},PITC={x:1500+OX,y:770};
 
 // ---------- helpers
 function el(tag,attrs,parent){const n=document.createElementNS(NS,tag);if(attrs)for(const k in attrs)n.setAttribute(k,attrs[k]);if(parent)parent.appendChild(n);return n;}
@@ -324,6 +363,32 @@ function caveman(o){
 }
 function tiger(){return `<ellipse cx="0" cy="1" rx="18" ry="4" fill="rgba(0,0,0,.2)"/><path d="M-16 -10 q-10 -8 -6 -18" fill="none" stroke="${INK}" stroke-width="5" stroke-linecap="round"/><path d="M-16 -10 q-10 -8 -6 -18" fill="none" stroke="#F39C34" stroke-width="2.5" stroke-linecap="round"/><path d="M-11 -6 v6 M-4 -6 v6 M6 -6 v6 M12 -6 v6" stroke="${INK}" stroke-width="4" stroke-linecap="round"/><ellipse cx="0" cy="-11" rx="17" ry="8" fill="#F39C34" stroke="${INK}" stroke-width="2.2"/><path d="M-8 -18 l2 7 M-1 -19 l1 8 M6 -18 l-1 7" stroke="${INK}" stroke-width="2" stroke-linecap="round"/><circle cx="16" cy="-17" r="7.5" fill="#F39C34" stroke="${INK}" stroke-width="2.2"/><circle cx="18" cy="-19" r="1.4" fill="${INK}"/><path d="M15 -11 l1.5 5 l1.5 -5 M19 -11 l1.5 5 l1.5 -5" fill="#fff" stroke="${INK}" stroke-width="1"/><path d="M11 -23 l2 -4 l3 3" fill="#F39C34" stroke="${INK}" stroke-width="1.8" stroke-linejoin="round"/>`;}
 function dog(){return `<ellipse cx="0" cy="1" rx="12" ry="3" fill="rgba(0,0,0,.2)"/><path d="M-10 -8 q-7 -5 -4 -12" fill="none" stroke="${INK}" stroke-width="4" stroke-linecap="round"/><path d="M-10 -8 q-7 -5 -4 -12" fill="none" stroke="#C47A3A" stroke-width="2" stroke-linecap="round"/><path d="M-7 -4 v4 M6 -4 v4" stroke="${INK}" stroke-width="3.5" stroke-linecap="round"/><ellipse cx="0" cy="-8" rx="11" ry="5.5" fill="#C47A3A" stroke="${INK}" stroke-width="2"/><circle cx="11" cy="-13" r="5.5" fill="#C47A3A" stroke="${INK}" stroke-width="2"/><path d="M8 -17 l-1 6 l4 -3z" fill="#8A4F22" stroke="${INK}" stroke-width="1.2"/><circle cx="13" cy="-14" r="1.2" fill="${INK}"/><circle cx="16.5" cy="-12" r="1.3" fill="${INK}"/>`;}
+function parrot(){return `<g transform="translate(0,-34)"><path d="M-3 4 l-7 14 l6 -3 l3 4z" fill="#3E9E3A" stroke="${INK}" stroke-width="1.8" stroke-linejoin="round"/><ellipse cx="0" cy="-4" rx="7" ry="9" fill="#E8402A" stroke="${INK}" stroke-width="2"/><path d="M-5 -6 q-9 4 -6 12 q4 -2 8 -6z" fill="#3FA9E0" stroke="${INK}" stroke-width="1.6" stroke-linejoin="round"/><circle cx="3" cy="-14" r="6" fill="#E8402A" stroke="${INK}" stroke-width="2"/><circle cx="5" cy="-15" r="1.4" fill="${INK}"/><path d="M8 -16 q5 1 3 6 l-4 -2z" fill="#FFD23F" stroke="${INK}" stroke-width="1.3" stroke-linejoin="round"/><path d="M-2 5 v4 M2 5 v4" stroke="${INK}" stroke-width="2" stroke-linecap="round"/></g>`;}
+function trex(){const G='#5DB84A';return `<ellipse cx="0" cy="1" rx="15" ry="3.5" fill="rgba(0,0,0,.2)"/><path d="M-4 -12 l-2 12 M5 -12 l2 12" stroke="${INK}" stroke-width="6" stroke-linecap="round"/><path d="M-4 -12 l-2 12 M5 -12 l2 12" stroke="${G}" stroke-width="3" stroke-linecap="round"/><path d="M-6 -20 Q-22 -16 -28 -6 Q-16 -9 -4 -11Z" fill="${G}" stroke="${INK}" stroke-width="2" stroke-linejoin="round"/><ellipse cx="1" cy="-18" rx="10" ry="9" fill="${G}" stroke="${INK}" stroke-width="2.2"/><ellipse cx="3" cy="-15" rx="5" ry="4" fill="#C9E89A"/><path d="M2 -24 Q1 -38 14 -38 Q25 -37 25 -30 Q25 -24 15 -24 L7 -21Z" fill="${G}" stroke="${INK}" stroke-width="2.2" stroke-linejoin="round"/><circle cx="14" cy="-32" r="1.6" fill="${INK}"/><path d="M15 -24 l1.2 2.4 l1.2 -2.4 M19 -24 l1.2 2.4 l1.2 -2.4" fill="#fff" stroke="${INK}" stroke-width="1"/><path d="M9 -17 l5 2" stroke="${INK}" stroke-width="3.5" stroke-linecap="round"/><path d="M-3 -24 l2 -3 l2 3 M-8 -22 l2 -3 l2 3" fill="#3E8E34" stroke="${INK}" stroke-width="1"/>`;}
+function quad(c,dark,ears,tail){return `<ellipse cx="0" cy="1" rx="14" ry="3.2" fill="rgba(0,0,0,.2)"/>${tail}<path d="M-8 -4 v4 M7 -4 v4" stroke="${INK}" stroke-width="3.8" stroke-linecap="round"/><ellipse cx="0" cy="-9" rx="12" ry="6" fill="${c}" stroke="${INK}" stroke-width="2"/><circle cx="12" cy="-14" r="6" fill="${c}" stroke="${INK}" stroke-width="2"/>${ears}<circle cx="14" cy="-15" r="1.3" fill="${INK}"/><circle cx="17.8" cy="-13" r="1.4" fill="${INK}"/>`;}
+function wolf(){const c='#9AA0A8';return quad(c,'#6E747C',`<path d="M8 -18 l1 -8 l4 6z M13 -19 l3 -7 l2 7z" fill="${c}" stroke="${INK}" stroke-width="1.6" stroke-linejoin="round"/><path d="M14 -11 q3 1 5 -1" stroke="#fff" stroke-width="2" fill="none"/>`,`<path d="M-11 -9 Q-22 -10 -24 -2 Q-16 -4 -10 -6Z" fill="${c}" stroke="${INK}" stroke-width="2" stroke-linejoin="round"/>`);}
+function wildcat(){const c='#D9A55A';return quad(c,'#8A5A2B',`<path d="M8 -18 l1 -7 l4 5z M13 -19 l3 -6 l2 6z" fill="${c}" stroke="${INK}" stroke-width="1.6" stroke-linejoin="round"/><path d="M-4 -14 l1 5 M1 -15 l0 5 M6 -14 l-1 5" stroke="#8A5A2B" stroke-width="2" stroke-linecap="round"/>`,`<path d="M-11 -9 q-10 -4 -8 -16" fill="none" stroke="${INK}" stroke-width="5" stroke-linecap="round"/><path d="M-11 -9 q-10 -4 -8 -16" fill="none" stroke="${c}" stroke-width="2.6" stroke-linecap="round"/>`);}
+function beastSVG(t){
+ switch(t){
+  case 'ciervo':return `<g transform="scale(1.35)">${quad('#B5783E','#7A4A22',`<path d="M10 -19 l-3 -10 M8.5 -25 l-5 -3 M15 -19 l3 -10 M16.5 -25 l5 -3" stroke="${INK}" stroke-width="2.4" stroke-linecap="round"/><path d="M8 -18 l1 -6 l4 4z" fill="#B5783E" stroke="${INK}" stroke-width="1.4"/><circle cx="-2" cy="-10" r="1.6" fill="#FFF3DC"/><circle cx="4" cy="-9" r="1.6" fill="#FFF3DC"/>`,`<ellipse cx="-12" cy="-12" rx="3" ry="4" fill="#FFF3DC" stroke="${INK}" stroke-width="1.6"/>`)}</g>`;
+  case 'cabra':return `<g transform="scale(1.1)">${quad('#EDE6DA','#9C8F80',`<path d="M9 -19 q-6 -8 -2 -12 M14 -19 q4 -9 9 -8" fill="none" stroke="#7A6450" stroke-width="3" stroke-linecap="round"/><path d="M15 -9 l1 6 l2 -6" fill="#EDE6DA" stroke="${INK}" stroke-width="1.4"/>`,`<path d="M-12 -12 l-4 -4" stroke="${INK}" stroke-width="3" stroke-linecap="round"/>`)}</g>`;
+  case 'jabali':return `<g transform="scale(1.25)">${quad('#6B4226','#3B2414',`<path d="M8 -18 l1 -5 l4 4z" fill="#6B4226" stroke="${INK}" stroke-width="1.4"/><path d="M16 -11 q4 -1 4 -5" fill="none" stroke="#FFF6E0" stroke-width="2.4" stroke-linecap="round"/><path d="M-6 -15 l2 -4 l2 4 l2 -4 l2 4" fill="none" stroke="${INK}" stroke-width="1.6"/>`,`<path d="M-12 -10 q-5 2 -4 -4" fill="none" stroke="${INK}" stroke-width="2"/>`)}</g>`;
+  default:return `<ellipse cx="0" cy="1" rx="8" ry="2" fill="rgba(0,0,0,.18)"/><ellipse cx="0" cy="-6" rx="8.5" ry="6" fill="#E9E2D6" stroke="${INK}" stroke-width="2"/><ellipse cx="5" cy="-20" rx="2" ry="6.5" fill="#E9E2D6" stroke="${INK}" stroke-width="1.6"/><ellipse cx="9.5" cy="-19" rx="2" ry="6.5" fill="#E9E2D6" stroke="${INK}" stroke-width="1.6"/><circle cx="7.5" cy="-11" r="4.8" fill="#E9E2D6" stroke="${INK}" stroke-width="2"/><circle cx="-8.5" cy="-7" r="2.6" fill="#fff" stroke="${INK}" stroke-width="1.2"/><circle cx="9" cy="-12" r="1.1" fill="${INK}"/>`;
+ }
+}
+function petSVG(m){
+ switch(m.tipo){
+  case 'tigre':return m.bebe?`<g transform="scale(.72)">${tiger()}</g>`:tiger();
+  case 'perro':return dog();
+  case 'loro':return parrot();
+  case 'mamut':return `<g transform="scale(.3)">${mammothSVG()}</g>`;
+  case 'trex':return trex();
+  case 'lobo':return wolf();
+  case 'gato':return wildcat();
+  default:return dog();
+ }
+}
+function petKind(m){const P=STR[LANG].pets;return (m.tipo==='tigre'&&m.bebe)?P.tigreB:(P[m.tipo]||P.perro);}
 function mammothSVG(){return `<ellipse cx="0" cy="2" rx="70" ry="10" fill="rgba(0,0,0,.2)"/>
  <path d="M-40 -30 v30 M-18 -30 v30 M22 -30 v30 M44 -30 v30" stroke="${INK}" stroke-width="20" stroke-linecap="round"/><path d="M-40 -30 v30 M-18 -30 v30 M22 -30 v30 M44 -30 v30" stroke="#6B4226" stroke-width="13" stroke-linecap="round"/>
  <path d="M-62 -40 q-14 -6 -12 -26" fill="none" stroke="${INK}" stroke-width="5" stroke-linecap="round"/>
@@ -342,8 +407,8 @@ function grass(x,y){return `<path d="M${x} ${y} l-6 -14 M${x} ${y} l0 -16 M${x} 
 
 function scenery(D){
  const g=el('g',{id:'scenery'},svg);
- const stars=Array.from({length:70},(_,i)=>{const r=rnd(i*97+5);return `<circle cx="${(r()*WW).toFixed(0)}" cy="${(r()*320).toFixed(0)}" r="${(1+r()*2).toFixed(1)}" fill="#FFF8D6"/>`;}).join('');
- const tufts=Array.from({length:40},(_,i)=>{const r=rnd(i*31+7);const x=(r()*WW)|0,y=(520+r()*460)|0;if(x>1990&&x<2260)return '';return grass(x,y);}).join('');
+ const stars=Array.from({length:130},(_,i)=>{const r=rnd(i*97+5);return `<circle cx="${(r()*WW).toFixed(0)}" cy="${(r()*320).toFixed(0)}" r="${(1+r()*2).toFixed(1)}" fill="#FFF8D6"/>`;}).join('');
+ const tufts=Array.from({length:40},(_,i)=>{const r=rnd(i*31+7);const x=(r()*2800)|0,y=(520+r()*460)|0;if(x>1990&&x<2260)return '';return grass(x,y);}).join('');
  g.innerHTML=`
  <defs>
   <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3EC6E0"/><stop offset="1" stop-color="#BFF3F0"/></linearGradient>
@@ -353,10 +418,12 @@ function scenery(D){
  <g id="stars" opacity="0">${stars}</g>
  <circle id="sun" r="54" fill="#FFE066" stroke="#FFB627" stroke-width="8"/><circle id="moon" r="40" fill="#F4F1DE" stroke="#C9C3A8" stroke-width="6"/>
  <g fill="#fff" opacity=".95"><g id="cl1"><ellipse cx="0" cy="0" rx="90" ry="28"/><ellipse cx="40" cy="-20" rx="60" ry="30"/></g><g id="cl2"><ellipse cx="0" cy="0" rx="70" ry="22"/><ellipse cx="-30" cy="-16" rx="45" ry="24"/></g><g id="cl3"><ellipse cx="0" cy="0" rx="80" ry="24"/><ellipse cx="30" cy="-18" rx="50" ry="26"/></g></g>
+ ${devBack()}
+ <g id="valle" transform="translate(${OX},0)">
  <path d="M0 470 L160 300 L300 400 L460 240 L640 410 L860 250 L1000 380 L1200 200 L1440 420 L1640 230 L1860 380 L2060 240 L2280 400 L2480 260 L2660 380 L2800 300 L2800 470Z" fill="#7C8FB0" stroke="${INK}" stroke-width="6" stroke-linejoin="round"/>
  <path d="M460 240 L432 292 L452 286 L470 306 L490 280Z M1200 200 L1166 262 L1190 256 L1210 280 L1236 250Z M1640 230 L1608 286 L1632 280 L1652 300 L1674 270Z M2060 240 L2032 290 L2054 284 L2072 302 L2090 276Z M2480 260 L2452 310 L2474 304 L2492 322 L2510 296Z" fill="#fff"/>
- <path d="M0 470 Q400 430 800 470 T1600 460 T2400 470 T2800 460 L2800 1000 L0 1000Z" fill="#7BCB4A" stroke="${INK}" stroke-width="6"/>
- <path d="M0 640 Q500 600 1000 660 T2000 650 T2800 640 L2800 1000 L0 1000Z" fill="#6CC043"/>
+ <path d="M-40 472 Q400 430 800 470 T1600 460 T2400 470 T2840 458 L2840 1000 L-40 1000Z" fill="#7BCB4A" stroke="${INK}" stroke-width="6"/>
+ <path d="M-40 642 Q500 600 1000 660 T2000 650 T2840 640 L2840 1000 L-40 1000Z" fill="#6CC043"/>
  <path d="M0 620 Q300 600 700 640 L700 1000 L0 1000Z" fill="#C9B458" opacity=".55"/>
  ${tufts}
  <g id="bones" opacity=".9"><path d="M520 940 l40 -6 M524 930 l4 16 M556 924 l4 16" stroke="${INK}" stroke-width="8" stroke-linecap="round"/><path d="M520 940 l40 -6" stroke="#FFF6E0" stroke-width="4" stroke-linecap="round"/><ellipse cx="150" cy="905" rx="22" ry="14" fill="#FFF6E0" stroke="${INK}" stroke-width="4"/><circle cx="142" cy="903" r="3" fill="${INK}"/><circle cx="156" cy="903" r="3" fill="${INK}"/></g>
@@ -364,22 +431,75 @@ function scenery(D){
  <path d="M1990 470 C1970 560 2090 620 2040 700 C1990 780 2120 860 2090 1000 L2210 1000 C2240 860 2120 780 2160 700 C2210 610 2080 560 2090 470Z" fill="#3FA9E0" stroke="${INK}" stroke-width="5" stroke-linejoin="round"/>
  <path d="M2052 560 q14 -6 28 0 M2080 700 q14 -6 28 0 M2120 820 q14 -6 28 0 M2150 940 q14 -6 28 0" stroke="#BFE8FF" stroke-width="5" fill="none" stroke-linecap="round"/>
  <g id="caveg" role="button" tabindex="0" aria-label="Cueva"><path d="M740 632 Q720 420 880 380 Q1010 350 1100 470 Q1150 560 1110 632Z" fill="#A08A74" stroke="${INK}" stroke-width="6" stroke-linejoin="round"/><path id="door" d="M860 632 Q855 532 930 524 Q1005 532 1000 632Z" fill="#3A2A20" stroke="${INK}" stroke-width="6"/><path d="M790 500 q20 -14 40 0 M1020 450 q20 -14 40 0" stroke="#7E6A56" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M1060 520 l14 -10 l6 12 M800 560 l10 -16 l12 8" stroke="#C9884A" stroke-width="4" fill="none" stroke-linecap="round"/></g>
- <text id="cavesign" class="sign" x="930" y="370" text-anchor="middle" style="display:none"></text>
+ <text id="cavesign" class="sign" x="${930+OX}" y="370" text-anchor="middle" style="display:none"></text>
  <g id="quarry"><path d="M1150 552 q10 -30 40 -26 q30 -10 44 18 q16 6 10 18 z" fill="#B3A797" stroke="${INK}" stroke-width="4" stroke-linejoin="round"/><circle cx="1138" cy="552" r="10" fill="#C9BEB0" stroke="${INK}" stroke-width="3"/></g>
  <path d="M1320 600 Q1316 548 1370 540 Q1432 536 1440 590 Q1444 606 1424 608 L1332 608 Q1320 608 1320 600Z" fill="#9C8F80" stroke="${INK}" stroke-width="5" stroke-linejoin="round"/>
  <g id="pit">${Array.from({length:9},(_,i)=>{const a=i/9*Math.PI*2;return `<ellipse cx="${(1500+Math.cos(a)*46).toFixed(0)}" cy="${(742+Math.sin(a)*18).toFixed(0)}" rx="12" ry="8" fill="#9C8F80" stroke="${INK}" stroke-width="3"/>`;}).join('')}<path d="M1475 742 L1525 732 M1475 732 L1525 742" stroke="${INK}" stroke-width="10" stroke-linecap="round"/><path d="M1475 742 L1525 732 M1475 732 L1525 742" stroke="#8A5A2B" stroke-width="5" stroke-linecap="round"/></g>
  <g id="fire" ${D.fuego?'':'style="display:none"'}><circle cx="1500" cy="700" r="110" fill="url(#glow)"/><path d="M1500 738 C1460 714 1476 674 1494 650 C1496 674 1510 680 1514 686 C1522 664 1516 646 1528 630 C1552 664 1546 716 1500 738Z" fill="#FF8A1F" stroke="${INK}" stroke-width="4" stroke-linejoin="round"/></g>
- <g id="sparks"></g>
  ${tree(120,560,.8)}${tree(600,520,.7)}${tree(690,560,.9)}${tree(1250,520,.7)}
  ${pine(2330,620,.9)}${pine(2470,560,1)}${pine(2560,640,.85)}${pine(2700,580,1.05)}${pine(2760,700,.8)}${pine(2400,720,.75)}${pine(2650,760,.7)}
  ${bush(1020,840)}${bush(1070,870)}${bush(1160,920)}
  ${D.casaDe?hutSVG(1740,868,1,D.casaDe):''}
+ </g>
+ ${devFront()}${eastBack()}${eastFront()}
+ <g id="sparks"></g>
  `;
  return g;
 }
+// ---------- zona de construcción (izquierda): terrenos libres para construir en el futuro
+function devBack(){
+ const top='M0 470 L110 330 L250 410 L400 290 L560 400 L720 320 L'+OX+' 470';
+ return `<path d="${top}Z" fill="#7C8FB0"/><path d="${top}" fill="none" stroke="${INK}" stroke-width="6" stroke-linejoin="round"/><path d="M400 290 L374 340 L394 334 L410 352 L428 328Z M110 330 L94 360 L108 356 L120 368 L130 350Z" fill="#fff"/>`;
+}
+function devFront(){
+ let s=`<path d="M0 472 Q${OX/2} 452 ${OX-18} 472 L${OX-18} 1000 L0 1000Z" fill="#7BCB4A"/><path d="M0 472 Q${OX/2} 452 ${OX-18} 472" fill="none" stroke="${INK}" stroke-width="6"/>`;
+ s+=`<path d="M0 642 Q${OX/2} 625 ${OX-18} 642 L${OX-18} 1000 L0 1000Z" fill="#6CC043"/>`;
+ s+=`<path d="M50 560 Q450 520 850 566 L870 970 Q450 996 30 970Z" fill="#D9B87A" stroke="${INK}" stroke-width="5" stroke-linejoin="round"/>`;
+ [[90,640],[340,640],[590,640],[90,810],[340,810],[590,810]].forEach(([x,y])=>{
+  s+=`<g transform="translate(${x},${y})"><rect width="210" height="130" rx="10" fill="#E8CF97" stroke="${INK}" stroke-width="4" stroke-dasharray="16 10"/>`+
+   `<path d="M4 4 v-24 M206 4 v-24 M4 126 v-24 M206 126 v-24" stroke="${INK}" stroke-width="9" stroke-linecap="round"/><path d="M4 4 v-24 M206 4 v-24 M4 126 v-24 M206 126 v-24" stroke="#B5864F" stroke-width="4" stroke-linecap="round"/>`+
+   `<rect x="55" y="48" width="100" height="34" rx="8" fill="#FFF7E3" stroke="${INK}" stroke-width="3"/><text class="lotlbl" x="105" y="71" text-anchor="middle" style="font:900 15px var(--body);fill:${INK}">LIBRE</text></g>`;
+ });
+ s+=`<g transform="translate(470,600)"><path d="M-80 0 V-96 M80 0 V-96" stroke="${INK}" stroke-width="13" stroke-linecap="round"/><path d="M-80 0 V-96 M80 0 V-96" stroke="#8A5A2B" stroke-width="7" stroke-linecap="round"/>`+
+  `<rect x="-200" y="-196" width="400" height="104" rx="14" fill="#B5864F" stroke="${INK}" stroke-width="6"/>`+
+  `<text id="devT" class="sign" x="0" y="-150" text-anchor="middle" style="font-size:30px">ZONA DE CONSTRUCCIÓN</text>`+
+  `<text id="devS" x="0" y="-114" text-anchor="middle" style="font:900 18px var(--body);fill:#FFF7E3">Pronto: construye aquí</text></g>`;
+ s+=`<g transform="translate(790,955)">${[[-30,0],[0,0],[30,0],[-15,-22],[15,-22],[0,-44]].map(([x,y])=>`<circle cx="${x}" cy="${y}" r="13" fill="#B5864F" stroke="${INK}" stroke-width="4"/><circle cx="${x}" cy="${y}" r="5" fill="#8A5A2B"/>`).join('')}</g>`;
+ s+=`<g transform="translate(70,950)">${[[-14,0,14],[14,0,12],[0,-18,11]].map(([x,y,r])=>`<circle cx="${x}" cy="${y}" r="${r}" fill="#B3A797" stroke="${INK}" stroke-width="4"/>`).join('')}</g>`;
+ for(let x=14;x<OX-40;x+=74)s+=`<path d="M${x} 560 v-34" stroke="${INK}" stroke-width="9" stroke-linecap="round"/><path d="M${x} 560 v-34" stroke="#B5864F" stroke-width="4" stroke-linecap="round"/>`;
+ s+=`<path d="M14 540 H${OX-60}" stroke="#8A5A2B" stroke-width="4"/>`;
+ return s;
+}
+// ---------- bosque profundo y montañas (derecha)
+function eastBack(){
+ const X=OX+2800,top=`M${X} 300 L3900 210 L4080 360 L4300 160 L4520 330 L4700 120 L4900 300 L5100 150 L${WW} 260`;
+ return `<path d="M${X-12} 472 L${X-12} 302 ${top.slice(1)} L${WW} 472Z" fill="#7C8FB0"/><path d="${top}" fill="none" stroke="${INK}" stroke-width="6" stroke-linejoin="round"/>`+
+  `<path d="M4300 160 L4270 214 L4292 208 L4310 228 L4332 200Z M4700 120 L4666 182 L4690 176 L4710 198 L4736 168Z M5100 150 L5068 206 L5092 200 L5110 220 L5134 192Z M3900 210 L3876 254 L3896 248 L3912 264 L3930 242Z" fill="#fff"/>`;
+}
+function eastFront(){
+ const X=OX+2800;
+ let s=`<path d="M${X+22} 460 Q4000 452 4420 476 L${WW} 476 L${WW} 1000 L${X+22} 1000Z" fill="#6FC244"/><path d="M${X+22} 460 Q4000 452 4420 476 L${WW} 476" fill="none" stroke="${INK}" stroke-width="6"/>`;
+ s+=`<path d="M${X+22} 642 Q4000 620 4420 650 L4420 1000 L${X+22} 1000Z" fill="#4E9E3A"/>`;
+ s+=`<rect x="${X+22}" y="470" width="${4420-X-22}" height="530" fill="#1E4E24" opacity=".18"/>`;
+ [[3760,620,1],[3850,700,.9],[3995,600,1.15],[4070,700,.95],[4250,620,1.05],[4330,720,.9],[3800,980,.85],[4040,1000,.8],[4300,990,.85]].forEach(([x,y,k])=>{s+=pine(x,y,k);});
+ [[4150,915],[4205,925],[3960,800]].forEach(([x,y])=>{s+=`<path d="M${x-3} ${y} v-10 M${x+3} ${y} v-10" stroke="${INK}" stroke-width="3"/><path d="M${x-12} ${y-10} Q${x} ${y-28} ${x+12} ${y-10}Z" fill="#E5402A" stroke="${INK}" stroke-width="3"/><circle cx="${x-3}" cy="${y-17}" r="2.5" fill="#fff"/>`;});
+ // la montaña grande, con sendero hasta la cumbre
+ s+=`<path d="M4380 1000 L4380 700 Q4430 640 4500 660 Q4560 540 4650 560 Q4720 440 4800 450 Q4860 330 4930 330 Q4970 250 5010 262 Q5060 220 5110 280 Q5200 330 ${WW} 300 L${WW} 1000Z" fill="#A99A8A" stroke="${INK}" stroke-width="6" stroke-linejoin="round"/>`;
+ s+=`<path d="M4930 330 Q4970 250 5010 262 Q5060 220 5110 280 Q5080 300 5060 288 Q5040 306 5016 292 Q4990 310 4966 300 Q4950 330 4930 330Z" fill="#fff" stroke="${INK}" stroke-width="4" stroke-linejoin="round"/>`;
+ s+=`<path d="M4420 960 L4560 840 L4470 740 L4660 660 L4600 590 L4760 540 L4730 450 L4880 400 L4985 300" fill="none" stroke="#E6D3A3" stroke-width="12" stroke-dasharray="20 12" stroke-linecap="round" stroke-linejoin="round"/>`;
+ s+=`<path d="M5000 266 V196" stroke="${INK}" stroke-width="6" stroke-linecap="round"/><path d="M5002 198 L5046 210 L5002 224Z" fill="#E5402A" stroke="${INK}" stroke-width="3" stroke-linejoin="round"/>`;
+ [[4520,920,26],[4700,800,20],[5150,700,30],[4900,620,18],[5200,900,24]].forEach(([x,y,r])=>{s+=`<ellipse cx="${x}" cy="${y}" rx="${r}" ry="${r*.7}" fill="#8E8070" stroke="${INK}" stroke-width="4"/>`;});
+ [[5180,520],[5240,600]].forEach(([x,y])=>{s+=pine(x,y,.55);});
+ return s;
+}
 
 // ---------- agents
-const agents=[];let layer,nightRect,mam;
+const agents=[];let layer,nightRect,mam,fish;const beasts=[],birds=[];
+// animales que siempre andan por el mundo (no se pueden seguir): [tipo, recorrido]
+const BEASTS=[['ciervo',[['deep1',10],['deep2',12],['forest2',10]]],['ciervo',[['forest',12],['deep1',10],['deep2',8]]],
+ ['conejo',[['meadow',8],['pond',9],['berries2',7]]],['conejo',[['obra2',7],['edgeW',8],['plains2',9]]],
+ ['cabra',[['montCamino',10],['cumbre',14],['montPie',9]]],['cabra',[['cumbre',12],['montCamino',8]]],
+ ['jabali',[['plains1',10],['plains2',12],['edgeW',8]]]];
 function buildPath(steps){
  const legs=[];let prev=PLACE[steps[steps.length-1][0]];let total=0;
  for(const [pl,dwell,act] of steps){
@@ -401,7 +521,7 @@ function isDayAt(t){const h=gameMin(t)/60;return h>=6.5&&h<=17.5;}
 function eventAt(t){const S=Math.floor((t-EV0)/P)*P+EV0;const e=t-S;if(e>=0&&e<EVLEN&&isDayAt(S))return {S,e};return null;}
 function mamState(t){
  const ev=eventAt(t);if(!ev)return null;const e=ev.e;
- if(e<10)return {...mix({x:-160,y:M_SPOT.y},M_SPOT,e/10),alive:true,walking:true};
+ if(e<10)return {...mix({x:OX-180,y:M_SPOT.y},M_SPOT,e/10),alive:true,walking:true};
  if(e<34)return {...M_SPOT,alive:true,hunt:e>=20};
  if(e<58){const q=mix(M_SPOT,FEAST,(e-34)/24);return {x:q.x,y:q.y-34,carried:true,walking:true};}
  if(e<98)return {x:FEAST.x,y:FEAST.y,carried:false,down:true};
@@ -432,16 +552,20 @@ function dayOrEvent(a,t){
 function pos(a,t){
  const m=gameMin(t);
  const isNight=m>=NIGHT_START||m<NIGHT_END;
+ // quien tiene choza propia duerme en ella (y entra a descansar de día); el resto duerme en la cueva
+ const hut=!!(a.data&&a.data.casa),HOME=hut?PLACE.hut:DOOR;
  if(isNight){
   const since=(m-NIGHT_START+1440)%1440;
   const start=dayOrEvent(a,t-since);
-  const d=Math.hypot(DOOR.x-start.x,DOOR.y-start.y);const dur=Math.min(TRANS+12,Math.max(4,d/(SPEED*1.6)));
-  if(since<dur){const q=mix(start,DOOR,since/dur);return {x:q.x+a.jx*0.3*(1-since/dur),y:q.y,walking:true,dir:Math.sign(DOOR.x-start.x)||1,act:'irDormir',place:'cave'};}
-  return {x:DOOR.x,y:DOOR.y,walking:false,dir:a.face,act:'dormir',place:'cave',inside:true};
+  const d=Math.hypot(HOME.x-start.x,HOME.y-start.y);const dur=Math.min(TRANS+12,Math.max(4,d/(SPEED*1.6)));
+  if(since<dur){const q=mix(start,HOME,since/dur);return {x:q.x+a.jx*0.3*(1-since/dur),y:q.y,walking:true,dir:Math.sign(HOME.x-start.x)||1,act:hut?'irChoza':'irDormir',place:hut?'hut':'cave'};}
+  return {x:HOME.x,y:HOME.y,walking:false,dir:a.face,act:hut?'dormirChoza':'dormir',place:hut?'hut':'cave',inside:!hut,inHut:hut};
  }
  const since=(m-NIGHT_END+1440)%1440;
- if(since<TRANS){const p=dayOrEvent(a,t);const q=mix(DOOR,p,since/TRANS);return {x:q.x,y:q.y,walking:true,dir:Math.sign(p.x-DOOR.x)||1,act:'despertar',place:p.place};}
- return dayOrEvent(a,t);
+ if(since<TRANS){const p=dayOrEvent(a,t);const q=mix(HOME,p,since/TRANS);return {x:q.x,y:q.y,walking:true,dir:Math.sign(p.x-HOME.x)||1,act:hut?'despertarChoza':'despertar',place:p.place};}
+ const p=dayOrEvent(a,t);
+ if(hut&&!p.walking&&p.act==='choza')p.inHut=true;
+ return p;
 }
 function makeAgent(o,i,D){
  const id=o.usuario||('g'+i);
@@ -460,7 +584,7 @@ function makeAgent(o,i,D){
  a.bubble=el('text',{'text-anchor':'middle',y:a.jefe?-98:-82,'font-size':22},g);
  a.g=g;
  if(o.mascota&&o.mascota.tipo){
-  const pg=el('g',{class:'pet'},layer);const pb=el('g',{},pg);pb.innerHTML=o.mascota.tipo==='tigre'?tiger():dog();
+  const pg=el('g',{class:'pet'},layer);const pb=el('g',{},pg);pb.innerHTML=petSVG(o.mascota);
   if(o.mascota.nombre){const tx=el('text',{class:'lbl','text-anchor':'middle',y:14,style:'font-size:10px'},pg);tx.textContent=trim(o.mascota.nombre,14);}
   a.pet={g:pg,b:pb};
  }
@@ -478,7 +602,7 @@ function clampX(x,w){return Math.min(WW-w,Math.max(0,x));}
 function actText(a,p){
  const A=ACT[p.act]||ACT.walk;if(!A[LANG])return null;
  let pet='';
- if(a.data.mascota&&a.data.mascota.tipo){const nm=a.data.mascota.nombre;const kind=a.data.mascota.tipo==='tigre'?(LANG==='es'?'su tigre':'their tiger'):(LANG==='es'?'su perrita':'their pup');pet=(LANG==='es'?' con ':' with ')+kind+(nm?' '+nm:'');}
+ if(a.data.mascota&&a.data.mascota.tipo){const nm=a.data.mascota.nombre;const kind=petKind(a.data.mascota);pet=(LANG==='es'?' con ':' with ')+kind+(nm?' '+nm:'');}
  const place=PLACE[p.place]?PLACE[p.place][LANG]:'';
  return {em:A.em,html:esc(A[LANG]).replace('{u}','<button type="button" data-follow="'+esc(a.id)+'">'+esc(a.user)+'</button>').replace('{p}',esc(pet)).replace('{l}',esc(place))};
 }
@@ -491,6 +615,7 @@ function applyLang(){
  $('pan-l').setAttribute('aria-label',t('left'));$('pan-r').setAttribute('aria-label',t('right'));
  const nav=$('nav');nav.querySelectorAll('button').forEach(b=>b.remove());
  for(const k in ZONES){const b=document.createElement('button');b.type='button';b.textContent=t('zones')[k];b.addEventListener('click',()=>goTo(ZONES[k]));nav.appendChild(b);}
+ const dT=document.getElementById('devT');if(dT){dT.textContent=t('devT');document.getElementById('devS').textContent=t('devS');document.querySelectorAll('.lotlbl').forEach(n=>{n.textContent=t('lot');});}
  if(D)renderStatic();
  renderProfile();
 }
@@ -499,9 +624,12 @@ function renderStatic(){
  $('h-dia').textContent=D.dia;$('h-pop').textContent=Number(D.poblacion||0).toLocaleString(LANG==='es'?'es':'en');
  $('h-tribu').textContent=D.tribu||t('noname');
  $('vote-q').textContent=L(D.votacion);
- $('vote-link').href=(LANG==='en'?D.votacion&&D.votacion.url_en:D.votacion&&D.votacion.url_es)||'#';
+ const V=D.votacion||{};let redes=(LANG==='en'?V.redes_en:V.redes_es)||[];
+ if(!redes.length){const u=LANG==='en'?V.url_en:V.url_es;if(u)redes=[{red:'TikTok',url:u}];}
+ const ico={TikTok:['tt','🎵'],Instagram:['ig','📸'],YouTube:['yt','▶️']};
+ $('vote-links').innerHTML=redes.map(r=>{const c=ico[r.red]||['green','💬'];return `<a class="btn ${c[0]}" href="${esc(r.url)}" target="_blank" rel="noopener">${c[1]} ${esc(r.red)}</a>`;}).join('');
  $('research').textContent=L(D.investigando)||'—';
- $('research-bar').style.width=Math.max(4,Math.min(100,Number(D.progreso||12)))+'%';
+ renderResearch();
  $('shop').href=D.tienda||'https://hoo.be/exzards';
  const st=$('story');st.innerHTML='';
  (D.historia||[]).slice().reverse().forEach(h=>{const li=document.createElement('li');li.innerHTML=`<span class="d">${esc(t('day'))} ${esc(h.dia)}</span><span>${esc(L(h))}</span>`;st.appendChild(li);});
@@ -509,6 +637,20 @@ function renderStatic(){
  const ch=$('chips');ch.innerHTML='';
  agents.filter(a=>a.user).forEach(a=>{const b=document.createElement('button');b.type='button';b.className='chip'+(a.jefe?' jefe':'');b.textContent=(a.jefe?'👑 ':'')+a.user;b.setAttribute('aria-pressed',follow===a.id);b.addEventListener('click',()=>select(a.id,true));ch.appendChild(b);});
 }
+// research bar: fills in real time from investigando.inicio over investigando.dias days
+function renderResearch(){
+ const I=D&&D.investigando||{};const bar=$('research-bar'),left=$('research-left');
+ const start=I.inicio?new Date(I.inicio+(String(I.inicio).length<=10?'T00:00:00':'')).getTime():NaN;
+ const days=Number(I.dias||0);
+ if(!isFinite(start)||!days){bar.style.width=Math.max(4,Math.min(100,Number(D.progreso||12)))+'%';left.textContent='';return;}
+ const k=Math.min(1,Math.max(0,(Date.now()-start)/(days*86400000)));
+ bar.style.width=Math.max(4,k*100).toFixed(2)+'%';
+ const ms=start+days*86400000-Date.now();
+ if(ms<=0)left.textContent=t('done');
+ else if(ms<86400000)left.textContent=fmt(t('leftH'),{n:Math.max(1,Math.ceil(ms/3600000))});
+ else{const n=Math.ceil(ms/86400000);left.textContent=n===1?t('leftD1'):fmt(t('leftD'),{n});}
+}
+setInterval(()=>{if(D)renderResearch();},60000);
 function select(id,scroll){
  follow=id;$('zoomout').hidden=!id;
  if(id){const a=agents.find(x=>x.id===id);if(a&&a.p&&a.p.inside)openCave();else closeCave();}
@@ -521,7 +663,7 @@ function renderProfile(notFound){
  const a=agents.find(x=>x.id===follow);if(!a){r.innerHTML='';return;}
  const o=a.data,tags=[];
  if(a.jefe)tags.push('👑 '+t('chief'));
- if(o.mascota&&o.mascota.tipo)tags.push((o.mascota.tipo==='tigre'?'🐯 ':'🐕 ')+t('pet')+(o.mascota.nombre?': '+o.mascota.nombre:''));
+ if(o.mascota&&o.mascota.tipo){const k=petKind(o.mascota).replace(/^(su|their)\s/,'');tags.push((PET_EM[o.mascota.tipo]||'🐾')+' '+t('pet')+': '+k+(o.mascota.nombre?' «'+o.mascota.nombre+'»':''));}
  if(o.casa)tags.push('🛖 '+t('hut'));
  r.innerHTML=`<div class="profile"><div class="u">${esc(a.user)}</div><div>${esc(a.jefe?t('chief'):L(o.papel))}</div><div class="row">${tags.map(x=>`<span class="tag">${esc(x)}</span>`).join('')}</div><div class="note">${esc(t('since'))} ${esc(o.desde!=null?o.desde:0)} · ${esc(t('now'))}: <span id="p-now"></span></div></div>`;
 }
@@ -575,14 +717,14 @@ function frame(){
  const sun=$('sun'),moon=$('moon');
  if(hr>=6&&hr<18){sun.setAttribute('cx',(WW*(hr-6)/12).toFixed(0));sun.setAttribute('cy',(380-Math.sin((hr-6)/12*Math.PI)*300).toFixed(0));sun.style.display='';}else sun.style.display='none';
  const mh=(hr>=18?hr-18:hr+6);if(hr>=18||hr<6){moon.setAttribute('cx',(WW*mh/12).toFixed(0));moon.setAttribute('cy',(380-Math.sin(mh/12*Math.PI)*300).toFixed(0));moon.style.display='';}else moon.style.display='none';
- $('cl1').setAttribute('transform',`translate(${((now*6)%3100)-150},120)`);
- $('cl2').setAttribute('transform',`translate(${((now*4+1200)%3100)-150},190)`);
- $('cl3').setAttribute('transform',`translate(${((now*5+2300)%3100)-150},150)`);
+ $('cl1').setAttribute('transform',`translate(${((now*6)%(WW+300))-150},120)`);
+ $('cl2').setAttribute('transform',`translate(${((now*4+1200)%(WW+300))-150},190)`);
+ $('cl3').setAttribute('transform',`translate(${((now*5+2300)%(WW+300))-150},150)`);
  $('h-clock').textContent=(dark>0.5?'🌙 ':'☀️ ')+String(Math.floor(hr)).padStart(2,'0')+':'+String(Math.floor(m%60)).padStart(2,'0');
  let insideN=0;
  for(const a of agents){
   const p=pos(a,now);a.p=p;
-  if(p.inside){insideN++;if(a.g.style.display!=='none')a.g.style.display='none';if(a.pet)a.pet.g.style.display='none';continue;}
+  if(p.inside||p.inHut){if(p.inside)insideN++;if(a.g.style.display!=='none')a.g.style.display='none';if(a.pet)a.pet.g.style.display='none';continue;}
   if(a.g.style.display==='none')a.g.style.display='';
   const sit=p.act==='comer';
   const bob=p.walking&&!reduce?-Math.abs(Math.sin(now*9+a.offset))*4:(!reduce?Math.sin(now*2+a.offset)*1:0);
@@ -593,7 +735,9 @@ function frame(){
   if(p.walking&&!['cargar','vaCaza'].includes(p.act))em='';
   if(a.bubble.textContent!==em)a.bubble.textContent=em;
   if(a.pet){
-   const q=pos(a,now-0.9);if(q.inside){a.pet.g.style.display='none';}else{a.pet.g.style.display='';
+   if(a.data.mascota.tipo==='loro'){a.pet.g.style.display='';const fl=!reduce?Math.sin(now*3+a.offset)*2:0;
+    a.pet.g.setAttribute('transform',`translate(${(p.x-(p.dir||1)*13*a.sc).toFixed(1)},${(p.y+bob-14+fl).toFixed(1)})`);a.pet.b.setAttribute('transform',`scale(${p.dir<0?-1:1},1)`);a.pet.y=p.y+1;continue;}
+   const q=pos(a,now-0.9);if(q.inside||q.inHut){a.pet.g.style.display='none';}else{a.pet.g.style.display='';
    const off=(q.dir||1)*-30;const pb=q.walking&&!reduce?-Math.abs(Math.sin(now*11))*3:0;
    a.pet.g.setAttribute('transform',`translate(${(q.x+off).toFixed(1)},${(q.y+8+pb).toFixed(1)})`);a.pet.b.setAttribute('transform',`scale(${q.dir<0?-1:1},1)`);a.pet.y=q.y+8;}
   }
@@ -614,7 +758,15 @@ function frame(){
  const ev=eventAt(now);const toast=$('toast');
  if(ev&&!(gameMin(now)>=NIGHT_START)){const k=ev.e<34?'mammoth':(ev.e<58?'carry':'feast');const tt=t(k);if($('toast-t').textContent!==tt)$('toast-t').textContent=tt;$('toast-b').textContent=t('see');toast.hidden=false;toast._x=ms?ms.x:FEAST.x;}else toast.hidden=true;
  // depth sort
- if(now-lastSort>0.25){lastSort=now;const items=[];for(const a of agents){if(a.p.inside)continue;items.push([a.p.y,a.g]);if(a.pet)items.push([a.pet.y||a.p.y,a.pet.g]);}
+ // choza ocupada: 💤 de noche, 🏠 cuando descansa dentro de día
+ const hz=$('hutz');if(hz){const o=agents.find(a=>a.data&&a.data.casa);const s=o&&o.p&&o.p.inHut?(o.p.act==='dormirChoza'?'💤':'🏠'):'';if(hz.textContent!==s)hz.textContent=s;}
+ // animales del valle, pájaros y peces
+ for(const b of beasts){const p=dayPos(b,now);const hop=!reduce&&p.walking?-Math.abs(Math.sin(now*(b.t==='conejo'?10:7)+b.offset))*(b.t==='conejo'?9:3):0;
+  b.g.setAttribute('transform',`translate(${p.x.toFixed(1)},${(p.y+hop).toFixed(1)})`);b.b.setAttribute('transform',`scale(${p.dir<0?-1:1},1)`);b.y=p.y;}
+ birds.forEach((g,i)=>{const x=((now*(38+i*9)+i*1700)%(WW+400))-200,y=150+i*60+Math.sin(now*.7+i)*25;g.setAttribute('transform',`translate(${x.toFixed(0)},${y.toFixed(0)}) scale(1,${reduce?1:(0.6+Math.abs(Math.sin(now*6+i))*0.6).toFixed(2)})`);});
+ {const ph=(now%7)/1.3;if(ph<1&&!reduce){fish.style.display='';const x=PLACE.river.x+40+ph*60,y=780-Math.sin(ph*Math.PI)*70;fish.setAttribute('transform',`translate(${x.toFixed(0)},${y.toFixed(0)}) rotate(${(-50+ph*100).toFixed(0)})`);}else fish.style.display='none';}
+ if(now-lastSort>0.25){lastSort=now;const items=[];for(const a of agents){if(a.p.inside||a.p.inHut)continue;items.push([a.p.y,a.g]);if(a.pet)items.push([a.pet.y||a.p.y,a.pet.g]);}
+  for(const b of beasts)items.push([b.y||0,b.g]);
   if(ms)items.push([ms.carried?ms.y+34:ms.y,mam]);items.sort((x,y)=>x[0]-y[0]);for(const it of items)layer.appendChild(it[1]);}
  // camera
  const v=viewSize();let tw=v.w,th=v.h,tx=camX,ty=v.y;
@@ -655,6 +807,11 @@ function boot(data){
  scenery(D);
  layer=el('g',{id:'agents'},svg);
  mam=el('g',{id:'mammoth',style:'display:none'},layer);mam.innerHTML=mammothSVG();
+ BEASTS.forEach(([tp,steps],i)=>{const b={t:tp,id:'b'+i,offset:hash('b'+i+tp)%997,face:i%2?1:-1,jx:((hash('bx'+i)%41)-20),jy:((hash('by'+i)%25)-12),path:buildPath(steps.map(s=>[s[0],s[1],'animal']))};
+  b.g=el('g',{class:'beast','pointer-events':'none'},layer);b.b=el('g',{},b.g);b.b.innerHTML=beastSVG(tp);beasts.push(b);});
+ fish=el('g',{'pointer-events':'none',style:'display:none'},svg);fish.innerHTML=`<path d="M-14 0 Q0 -10 12 0 Q0 10 -14 0Z" fill="#FF8A1F" stroke="${INK}" stroke-width="2.5"/><path d="M-14 0 l-8 -7 v14z" fill="#FF8A1F" stroke="${INK}" stroke-width="2.5" stroke-linejoin="round"/><circle cx="6" cy="-2" r="1.6" fill="${INK}"/>`;
+ for(let i=0;i<3;i++){const g=el('g',{'pointer-events':'none'},svg);g.innerHTML=`<path d="M-12 0 q6 -8 12 0 q6 -8 12 0" fill="none" stroke="${INK}" stroke-width="3.5" stroke-linecap="round"/>`;birds.push(g);}
+ el('text',{id:'hutz','text-anchor':'middle',x:1748+OX+46,y:760,'font-size':30,'pointer-events':'none'},svg);
  nightRect=el('rect',{x:0,y:0,width:WW,height:H,fill:'#0E1A3A',opacity:0,'pointer-events':'none'},svg);
  const sign=$('cavesign');svg.appendChild(sign);
  const cave=$('caveg');const oc=()=>{if(dragMoved)return;openCave();};cave.addEventListener('click',oc);sign.addEventListener('click',oc);sign.style.cursor='pointer';
@@ -662,7 +819,7 @@ function boot(data){
  const jefe=Object.assign({rol:'jefe',jefe:true,desde:0},D.jefe||{usuario:'Exzards'});
  makeAgent(jefe,0,D);
  (D.miembros||[]).forEach((m,i)=>makeAgent(m,i+1,D));
- const n=Math.min(24,Math.max(0,Number(D.aldeanos_genericos||0)));
+ const n=Math.min(40,Math.max(0,Number(D.aldeanos_genericos||0)));
  const pal=[['#F0B088','#4A2C17','#8C6A3A'],['#C98A5E','#2E1C10','#7A5A32'],['#E8A87C','#6B3A1E','#9A6232'],['#D9966A','#3B2414','#6E6A3A'],['#F5C9A0','#8A4A22','#7A4A22']];
  for(let i=0;i<n;i++){const c=pal[i%pal.length];makeAgent({piel:c[0],pelo:c[1],ropa:c[2]},i+20,D);}
  // hunters: named cazadores + 3 generic helpers
@@ -670,7 +827,7 @@ function boot(data){
  agents.filter(a=>!a.user).slice(0,3).forEach(a=>{a.hunter=true;a.hi=hi++;});
  // seats: chief at the head, then everyone
  agents.forEach((a,i)=>{a.seat=i;});
- const v=viewSize();camX=clampX(v.w<1600?ZONES.aldea-v.w/2-200:760,v.w);vb={x:camX,y:v.y,w:v.w,h:v.h};
+ const v=viewSize();camX=clampX(v.w<1600?ZONES.aldea-v.w/2-200:760+OX,v.w);vb={x:camX,y:v.y,w:v.w,h:v.h};
  renderStatic();applyLang();
  requestAnimationFrame(frame);
 }
