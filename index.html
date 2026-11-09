@@ -74,8 +74,18 @@ header{display:flex;align-items:center;justify-content:space-between;gap:12px;fl
 .cavein{position:absolute;inset:0;background:var(--cave);display:flex;flex-direction:column}
 .cavein svg{flex:1;width:100%;min-height:0;display:block}
 .cavein .bar2{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 10px;flex-wrap:wrap}
+.cavein .cbtns{display:flex;gap:8px;flex-wrap:wrap}
+#cavesvg .ojo{transform-box:fill-box;transform-origin:center;animation:parpadeo 4.2s infinite}
+#cavesvg .ojos2{animation:acecho 9s ease-in-out infinite}
+#cavesvg .pelea{animation:sacudir .35s ease-in-out infinite alternate}
+#cavesvg .boom{transform-box:fill-box;transform-origin:center;animation:golpe 1.1s ease-out infinite}
+@keyframes parpadeo{0%,90%,100%{transform:scaleY(1)}94%{transform:scaleY(.08)}}
+@keyframes acecho{0%,100%{transform:translate(0,0)}50%{transform:translate(-70px,18px)}}
+@keyframes sacudir{from{transform:translateX(-4px)}to{transform:translateX(4px)}}
+@keyframes golpe{0%{opacity:0;transform:scale(.4)}25%{opacity:1;transform:scale(1.15)}100%{opacity:0;transform:scale(1.5)}}
+@media (prefers-reduced-motion:reduce){#cavesvg .ojo,#cavesvg .ojos2,#cavesvg .pelea,#cavesvg .boom{animation:none}}
 .cavein .title{font-family:var(--display);color:var(--sun);font-size:clamp(15px,2.4vw,22px)}
-.cavein .msg{position:absolute;left:50%;top:55%;transform:translate(-50%,-50%);color:#F6E7C1;text-align:center;font-weight:800;max-width:min(420px,80%);font-size:15px}
+.cavein .msg{position:absolute;left:50%;top:80%;transform:translate(-50%,-50%);color:#F6E7C1;text-align:center;font-weight:800;max-width:min(420px,80%);font-size:15px}
 
 .grid{display:grid;grid-template-columns:1.1fr 1fr;gap:18px}
 @media (max-width:820px){.grid{grid-template-columns:1fr}}
@@ -142,7 +152,7 @@ svg text.sign{font:400 22px var(--display);fill:var(--sun);stroke:var(--ink);str
     <div class="toast" id="toast" hidden><span id="toast-t"></span><button type="button" class="btn small light" id="toast-b"></button></div>
     <div class="corner"><button type="button" class="btn small light" id="zoomout" hidden>🔭 <span data-t="all">Ver toda la aldea</span></button></div>
     <div class="cavein" id="cavein" hidden>
-      <div class="bar2"><span class="title" id="cave-title"></span><button type="button" class="btn small" id="cave-close">☀️ <span data-t="leave">Salir de la cueva</span></button></div>
+      <div class="bar2"><span class="title" id="cave-title"></span><span class="cbtns"><button type="button" class="btn small light" id="cave-back" hidden>◀ <span data-t="back">Volver</span></button><button type="button" class="btn small" id="cave-close">☀️ <span data-t="leave">Salir de la cueva</span></button></span></div>
       <svg id="cavesvg" viewBox="0 0 800 460" role="img" aria-label="Cueva"></svg>
       <div class="msg" id="cave-msg" hidden></div>
     </div>
@@ -187,7 +197,7 @@ svg text.sign{font:400 22px var(--display);fill:var(--sun);stroke:var(--ink);str
 </div>
 
 <script id="datos-respaldo" type="application/json">
-{"actualizado":"2026-11-09","dia":1,"poblacion":48,"tribu":null,"aldea":null,"era":"piedra","fuego":false,"investigando":{"es":"El fuego","en":"Fire","inicio":"2026-11-09","dias":7},"votacion":{"es":"Día 1: ¿dónde dormimos? 1 = explorar el fondo de la cueva · 2 = construir chozas junto al río. Y sigue abierto el nombre de la tribu.","en":"Day 1: where do we sleep? 1 = explore the back of the cave · 2 = build huts by the river. The tribe name vote is still open.","redes_es":[{"red":"TikTok","url":"https://www.tiktok.com/@.exzards"},{"red":"Instagram","url":"https://www.instagram.com/tutribudecide/"},{"red":"YouTube","url":"https://www.youtube.com/@tutribudecide"}],"redes_en":[{"red":"TikTok","url":"https://www.tiktok.com/@.exzards"},{"red":"Instagram","url":"https://www.instagram.com/yourtribedecides/"},{"red":"YouTube","url":"https://www.youtube.com/@yourtribedecides"}],"url_es":"https://www.tiktok.com/@.exzards","url_en":"https://www.tiktok.com/@.exzards"},"tienda":"https://hoo.be/exzards","historia":[{"dia":0,"es":"Exzards aparece solo en un valle vacío y funda la tribu. Los primeros en comentar se unen.","en":"Exzards appears alone in an empty valley and founds the tribe. The first commenters join."},{"dia":1,"es":"Llegan los 18 primeros de la tribu. Nadie gana el nombre todavía y empieza la búsqueda del fuego.","en":"The first 18 members arrive. No tribe name wins yet, and the search for fire begins."}],"jefe":{"usuario":"Exzards","piel":"#F0B088","pelo":"#5A341C","ropa":"#9A6232"},"miembros":[{"usuario":"germancn__","rol":"cazador","desde":0,"piel":"#C98A5E","pelo":"#2E1C10","ropa":"#8C6A3A","mascota":{"tipo":"tigre","nombre":""},"papel":{"es":"Cazador con su tigre dientes de sable","en":"Hunter with a sabertooth tiger"}},{"usuario":"rasche_rena","rol":"fuego","desde":0,"piel":"#F5C9A0","pelo":"#C0502A","ropa":"#7E8C3A","papel":{"es":"Nómada que busca el fuego","en":"Nomad searching for fire"}},{"usuario":"j8menezluquina8ciakassandra","rol":"hogar","desde":0,"pelo_largo":true,"piel":"#E8A87C","pelo":"#1E120A","ropa":"#B5783E","mascota":{"tipo":"perro","nombre":"Canelita"},"casa":true,"papel":{"es":"Vive en su choza con su perrita Canelita","en":"Lives in a hut with a pup named Canelita"}},{"usuario":"qwerty983251","rol":"agua","desde":0,"piel":"#D9966A","pelo":"#3B2414","ropa":"#6E8FA8","papel":{"es":"Trae agua del río. Propuso el nombre «Los Invencibles»","en":"Brings water from the river. Suggested the name «Los Invencibles»"}},{"usuario":"el_tiziano_2026","rol":"bayas","desde":0,"piel":"#F2B38A","pelo":"#7A4A22","ropa":"#A0522D","papel":{"es":"Recolector de bayas. Propuso el nombre «Los Picardos» para la aldea","en":"Berry gatherer. Suggested «Los Picardos» as the village name"}},{"usuario":"el.dante2.0","rol":"piedras","desde":0,"piel":"#E2A47A","pelo":"#3B2414","ropa":"#8E8A82","papel":{"es":"Junta piedras para las herramientas. Propuso el nombre «Cejas YT»","en":"Gathers stones for tools. Suggested the name «Cejas YT»"}},{"usuario":"777_chati_cr_23","rol":"cazador","desde":0,"piel":"#C98A5E","pelo":"#4A2C17","ropa":"#E07A2A","mascota":{"tipo":"tigre","nombre":"","bebe":true},"papel":{"es":"Cazador con su cachorro de dientes de sable","en":"Hunter with a sabertooth cub"}},{"usuario":"marrmarr556","rol":"bayas","desde":0,"piel":"#F5C9A0","pelo":"#6B3A1E","ropa":"#A0522D","papel":{"es":"Recolecta bayas. De los primeros en seguir a la tribu","en":"Picks berries. One of the very first followers"}},{"usuario":"bannana7-k","rol":"agua","desde":0,"piel":"#D9966A","pelo":"#2E1C10","ropa":"#4A7FB0","papel":{"es":"Trae agua del río","en":"Brings water from the river"}},{"usuario":"jum-v7j","rol":"bayas","desde":0,"piel":"#F0B088","pelo":"#8A4A22","ropa":"#4A7FB0","papel":{"es":"Recolecta bayas","en":"Picks berries"}},{"usuario":"Br0ken_sp5wn","rol":"agua","desde":0,"piel":"#C98A5E","pelo":"#1E120A","ropa":"#8E8A82","papel":{"es":"Trae agua del río","en":"Brings water from the river"}},{"usuario":"DEKU-c9z","rol":"bayas","desde":0,"piel":"#E8A87C","pelo":"#1E120A","ropa":"#7A5A32","papel":{"es":"Recolecta bayas. Propuso «La Tribu de los Leones»","en":"Picks berries. Suggested «La Tribu de los Leones»"}},{"usuario":"juanfer0138","rol":"piedras","desde":0,"piel":"#F2B38A","pelo":"#3B2414","ropa":"#E07A2A","mascota":{"tipo":"loro","nombre":""},"papel":{"es":"Junta piedras con su loro","en":"Gathers stones with their parrot"}},{"usuario":"noob6-y8h","rol":"cazador","desde":0,"piel":"#D9966A","pelo":"#5A341C","ropa":"#4A7FB0","mascota":{"tipo":"mamut","nombre":""},"papel":{"es":"Cazador con su mamut bebé. Su humilde choza es el suelo","en":"Hunter with a baby mammoth. Their humble hut is the ground"}},{"usuario":"Leila.alegriaAlegria","rol":"piedras","desde":0,"piel":"#F5C9A0","pelo":"#7A4A22","ropa":"#8E8A82","mascota":{"tipo":"trex","nombre":""},"papel":{"es":"«El Grasa». Junta piedras con su T-rex bebé","en":"«El Grasa». Gathers stones with a baby T-rex"}},{"usuario":"DLS_omarc78","rol":"cazador","desde":0,"piel":"#C98A5E","pelo":"#2E1C10","ropa":"#A0522D","mascota":{"tipo":"lobo","nombre":"Zeus"},"papel":{"es":"Cazador con su lobo Zeus. Lo encontró cazando. Propuso «Generación Z»","en":"Hunter with a wolf named Zeus, found while hunting. Suggested «Generación Z»"}},{"usuario":"ThiagoPeña-q5c","rol":"agua","desde":0,"piel":"#E2A47A","pelo":"#4A2C17","ropa":"#4A7FB0","papel":{"es":"Trae agua del río","en":"Brings water from the river"}},{"usuario":"cuydoro","rol":"bayas","desde":0,"pelo_largo":true,"piel":"#F0B088","pelo":"#6B3A1E","ropa":"#8E8A82","mascota":{"tipo":"gato","nombre":"Leo"},"papel":{"es":"Recolecta bayas con su gato montés Leo","en":"Picks berries with a wildcat named Leo"}}],"aldeanos_genericos":29}
+{"actualizado":"2026-11-09","dia":1,"poblacion":48,"tribu":null,"aldea":null,"era":"piedra","fuego":false,"cueva":{"estado":"oscuro","amenaza":null,"vida":100,"nota":null},"investigando":{"es":"El fuego","en":"Fire","inicio":"2026-11-09","dias":7},"votacion":{"es":"Día 1: ¿dónde dormimos? 1 = explorar el fondo de la cueva · 2 = construir chozas junto al río. Y sigue abierto el nombre de la tribu.","en":"Day 1: where do we sleep? 1 = explore the back of the cave · 2 = build huts by the river. The tribe name vote is still open.","redes_es":[{"red":"TikTok","url":"https://www.tiktok.com/@.exzards"},{"red":"Instagram","url":"https://www.instagram.com/tutribudecide/"},{"red":"YouTube","url":"https://www.youtube.com/@tutribudecide"}],"redes_en":[{"red":"TikTok","url":"https://www.tiktok.com/@.exzards"},{"red":"Instagram","url":"https://www.instagram.com/yourtribedecides/"},{"red":"YouTube","url":"https://www.youtube.com/@yourtribedecides"}],"url_es":"https://www.tiktok.com/@.exzards","url_en":"https://www.tiktok.com/@.exzards"},"tienda":"https://hoo.be/exzards","historia":[{"dia":0,"es":"Exzards aparece solo en un valle vacío y funda la tribu. Los primeros en comentar se unen.","en":"Exzards appears alone in an empty valley and founds the tribe. The first commenters join."},{"dia":1,"es":"Llegan los 18 primeros de la tribu. Nadie gana el nombre todavía y empieza la búsqueda del fuego.","en":"The first 18 members arrive. No tribe name wins yet, and the search for fire begins."}],"jefe":{"usuario":"Exzards","piel":"#F0B088","pelo":"#5A341C","ropa":"#9A6232"},"miembros":[{"usuario":"germancn__","rol":"cazador","desde":0,"piel":"#C98A5E","pelo":"#2E1C10","ropa":"#8C6A3A","mascota":{"tipo":"tigre","nombre":""},"papel":{"es":"Cazador con su tigre dientes de sable","en":"Hunter with a sabertooth tiger"}},{"usuario":"rasche_rena","rol":"fuego","desde":0,"piel":"#F5C9A0","pelo":"#C0502A","ropa":"#7E8C3A","papel":{"es":"Nómada que busca el fuego","en":"Nomad searching for fire"}},{"usuario":"j8menezluquina8ciakassandra","rol":"hogar","desde":0,"pelo_largo":true,"piel":"#E8A87C","pelo":"#1E120A","ropa":"#B5783E","mascota":{"tipo":"perro","nombre":"Canelita"},"casa":true,"papel":{"es":"Vive en su choza con su perrita Canelita","en":"Lives in a hut with a pup named Canelita"}},{"usuario":"qwerty983251","rol":"agua","desde":0,"piel":"#D9966A","pelo":"#3B2414","ropa":"#6E8FA8","papel":{"es":"Trae agua del río. Propuso el nombre «Los Invencibles»","en":"Brings water from the river. Suggested the name «Los Invencibles»"}},{"usuario":"el_tiziano_2026","rol":"bayas","desde":0,"piel":"#F2B38A","pelo":"#7A4A22","ropa":"#A0522D","papel":{"es":"Recolector de bayas. Propuso el nombre «Los Picardos» para la aldea","en":"Berry gatherer. Suggested «Los Picardos» as the village name"}},{"usuario":"el.dante2.0","rol":"piedras","desde":0,"piel":"#E2A47A","pelo":"#3B2414","ropa":"#8E8A82","papel":{"es":"Junta piedras para las herramientas. Propuso el nombre «Cejas YT»","en":"Gathers stones for tools. Suggested the name «Cejas YT»"}},{"usuario":"777_chati_cr_23","rol":"cazador","desde":0,"piel":"#C98A5E","pelo":"#4A2C17","ropa":"#E07A2A","mascota":{"tipo":"tigre","nombre":"","bebe":true},"papel":{"es":"Cazador con su cachorro de dientes de sable","en":"Hunter with a sabertooth cub"}},{"usuario":"marrmarr556","rol":"bayas","desde":0,"piel":"#F5C9A0","pelo":"#6B3A1E","ropa":"#A0522D","papel":{"es":"Recolecta bayas. De los primeros en seguir a la tribu","en":"Picks berries. One of the very first followers"}},{"usuario":"bannana7-k","rol":"agua","desde":0,"piel":"#D9966A","pelo":"#2E1C10","ropa":"#4A7FB0","papel":{"es":"Trae agua del río","en":"Brings water from the river"}},{"usuario":"jum-v7j","rol":"bayas","desde":0,"piel":"#F0B088","pelo":"#8A4A22","ropa":"#4A7FB0","papel":{"es":"Recolecta bayas","en":"Picks berries"}},{"usuario":"Br0ken_sp5wn","rol":"agua","desde":0,"piel":"#C98A5E","pelo":"#1E120A","ropa":"#8E8A82","papel":{"es":"Trae agua del río","en":"Brings water from the river"}},{"usuario":"DEKU-c9z","rol":"bayas","desde":0,"piel":"#E8A87C","pelo":"#1E120A","ropa":"#7A5A32","papel":{"es":"Recolecta bayas. Propuso «La Tribu de los Leones»","en":"Picks berries. Suggested «La Tribu de los Leones»"}},{"usuario":"juanfer0138","rol":"piedras","desde":0,"piel":"#F2B38A","pelo":"#3B2414","ropa":"#E07A2A","mascota":{"tipo":"loro","nombre":""},"papel":{"es":"Junta piedras con su loro","en":"Gathers stones with their parrot"}},{"usuario":"noob6-y8h","rol":"cazador","desde":0,"piel":"#D9966A","pelo":"#5A341C","ropa":"#4A7FB0","mascota":{"tipo":"mamut","nombre":""},"papel":{"es":"Cazador con su mamut bebé. Su humilde choza es el suelo","en":"Hunter with a baby mammoth. Their humble hut is the ground"}},{"usuario":"Leila.alegriaAlegria","rol":"piedras","desde":0,"piel":"#F5C9A0","pelo":"#7A4A22","ropa":"#8E8A82","mascota":{"tipo":"trex","nombre":""},"papel":{"es":"«El Grasa». Junta piedras con su T-rex bebé","en":"«El Grasa». Gathers stones with a baby T-rex"}},{"usuario":"DLS_omarc78","rol":"cazador","desde":0,"piel":"#C98A5E","pelo":"#2E1C10","ropa":"#A0522D","mascota":{"tipo":"lobo","nombre":"Zeus"},"papel":{"es":"Cazador con su lobo Zeus. Lo encontró cazando. Propuso «Generación Z»","en":"Hunter with a wolf named Zeus, found while hunting. Suggested «Generación Z»"}},{"usuario":"ThiagoPeña-q5c","rol":"agua","desde":0,"piel":"#E2A47A","pelo":"#4A2C17","ropa":"#4A7FB0","papel":{"es":"Trae agua del río","en":"Brings water from the river"}},{"usuario":"cuydoro","rol":"bayas","desde":0,"pelo_largo":true,"piel":"#F0B088","pelo":"#6B3A1E","ropa":"#8E8A82","mascota":{"tipo":"gato","nombre":"Leo"},"papel":{"es":"Recolecta bayas con su gato montés Leo","en":"Picks berries with a wildcat named Leo"}}],"aldeanos_genericos":29}
 </script>
 
 <script>
@@ -210,6 +220,10 @@ const STR={
   chief:'Jefe de la tribu',since:'En la tribu desde el día',pet:'Mascota',hut:'Tiene choza propia',now:'Ahora',
   logo:'TU TRIBU <span>DECIDE</span>',aria:'Aldea en vivo de la tribu',user:'Usuario',leave:'Salir de la cueva',goto:'Ir a',
   caveTitle:'Dentro de la cueva · {n} durmiendo',caveDay:'Dentro de la cueva',caveEmpty:'De día todos trabajan afuera. La tribu entra a dormir a las 21:00 (en {m} min).',
+  hole0:'🕳️ ¿Qué hay más adentro?',hole1:'🕳️ Seguir adentro',back:'Volver',room1:'🕳️ El túnel',room2:'🕳️ El fondo de la cueva',
+  dark1:'Sin fuego no se ve nada… solo se oyen gotas. 💧',dark2:'Algo respira en la oscuridad… 👀 ¿Lo exploramos? La tribu lo decide en el video.',
+  lit1:'Las antorchas iluminan el túnel.',battle:'⚔️ ¡La tribu pelea en el fondo de la cueva!',life:'Criatura',won:'¡La tribu venció! El fondo de la cueva ya es seguro.',
+  battleFeed:'La tribu pelea contra algo en el fondo de la cueva',
   sleepers:'💤 {n} — toca para entrar',mammoth:'🦣 ¡Apareció un mamut! Los cazadores van por él',carry:'💪 Los cazadores traen el mamut a la aldea',feast:'🍖 ¡Festín en la aldea! Todos comen',see:'Ver 👀',
   zones:{obra:'🏗️ Construcción',caza:'🦣 Llanura de caza',cueva:'🪨 Cueva',aldea:'🔥 Aldea',rio:'💧 Río',bosque:'🌲 Bosque profundo',montana:'⛰️ Montañas'},left:'Mover a la izquierda',right:'Mover a la derecha',
   devT:'ZONA DE CONSTRUCCIÓN',devS:'Pronto: construye aquí',lot:'LIBRE',
@@ -222,6 +236,10 @@ const STR={
   chief:'Tribe chief',since:'In the tribe since day',pet:'Pet',hut:'Has their own hut',now:'Now',
   logo:'YOUR TRIBE <span>DECIDES</span>',aria:'Live tribe village',user:'Username',leave:'Leave the cave',goto:'Go to',
   caveTitle:'Inside the cave · {n} sleeping',caveDay:'Inside the cave',caveEmpty:'During the day everyone works outside. The tribe goes to sleep at 21:00 (in {m} min).',
+  hole0:"🕳️ What's further in?",hole1:'🕳️ Go deeper',back:'Back',room1:'🕳️ The tunnel',room2:'🕳️ The back of the cave',
+  dark1:"Without fire you can't see a thing… only dripping water. 💧",dark2:'Something is breathing in the dark… 👀 Do we explore it? The tribe decides in the video.',
+  lit1:'The torches light up the tunnel.',battle:'⚔️ The tribe is fighting at the back of the cave!',life:'Creature',won:'The tribe won! The back of the cave is safe now.',
+  battleFeed:'The tribe is fighting something at the back of the cave',
   sleepers:'💤 {n} — tap to go in',mammoth:'🦣 A mammoth appeared! The hunters are going after it',carry:'💪 The hunters carry the mammoth to the village',feast:'🍖 Feast in the village! Everyone eats',see:'Watch 👀',
   zones:{obra:'🏗️ Building zone',caza:'🦣 Hunting plains',cueva:'🪨 Cave',aldea:'🔥 Village',rio:'💧 River',bosque:'🌲 Deep forest',montana:'⛰️ Mountains'},left:'Move left',right:'Move right',
   devT:'BUILDING ZONE',devS:'Coming soon: build here',lot:'FREE',
@@ -668,11 +686,67 @@ function renderProfile(notFound){
  r.innerHTML=`<div class="profile"><div class="u">${esc(a.user)}</div><div>${esc(a.jefe?t('chief'):L(o.papel))}</div><div class="row">${tags.map(x=>`<span class="tag">${esc(x)}</span>`).join('')}</div><div class="note">${esc(t('since'))} ${esc(o.desde!=null?o.desde:0)} · ${esc(t('now'))}: <span id="p-now"></span></div></div>`;
 }
 // ---------- cave interior
-function openCave(){caveOpen=true;$('cavein').hidden=false;renderCave();}
-function closeCave(){caveOpen=false;$('cavein').hidden=true;}
+function openCave(){caveOpen=true;caveRoom=0;$('cavein').hidden=false;renderCave();}
+function closeCave(){caveOpen=false;caveRoom=0;$('cavein').hidden=true;}
+// ---------- profundidad de la cueva: 0 entrada (dormitorio) · 1 túnel · 2 fondo. D.cueva = {estado: oscuro|batalla|vencido, amenaza, vida, nota}
+let caveRoom=0,deepKey='';
+function creatureSVG(tipo){
+ const eyes=(x,y,r)=>`<g class="ojo"><ellipse cx="${x}" cy="${y}" rx="${r}" ry="${r*.7}" fill="#FFD23F"/><ellipse cx="${x+r*2.6}" cy="${y}" rx="${r}" ry="${r*.7}" fill="#FFD23F"/></g>`;
+ if(tipo==='oso')return `<path d="M-120 0 Q-130 -120 -40 -150 Q-10 -210 50 -190 Q90 -220 110 -180 Q160 -150 140 -90 Q150 -30 120 0Z" fill="#120d0a" stroke="#2a201a" stroke-width="5"/><circle cx="20" cy="-200" r="18" fill="#120d0a" stroke="#2a201a" stroke-width="4"/><circle cx="96" cy="-196" r="18" fill="#120d0a" stroke="#2a201a" stroke-width="4"/>${eyes(36,-160,9)}<path d="M50 -128 l8 12 l8 -12 l8 12 l8 -12" fill="none" stroke="#EDE6DA" stroke-width="4"/>`;
+ return `<path d="M-130 0 Q-150 -150 0 -170 Q150 -150 130 0Z" fill="#0d0907" stroke="#221a14" stroke-width="5"/>${eyes(-36,-110,12)}`;
+}
+function renderDeep(){
+ const C=D.cueva||{estado:'oscuro'},lit=!!D.fuego,cs=$('cavesvg'),msg=$('cave-msg');
+ const key=LANG+'|'+caveRoom+'|'+JSON.stringify(C)+'|'+lit;
+ if(key===deepKey)return;deepKey=key;
+ let h=`<defs><linearGradient id="entr" x1="0" x2="1"><stop offset="0" stop-color="#6E5240" stop-opacity=".6"/><stop offset=".3" stop-color="#6E5240" stop-opacity="0"/></linearGradient><radialGradient id="tglow"><stop offset="0" stop-color="#FFB347" stop-opacity=".55"/><stop offset="1" stop-color="#FFB347" stop-opacity="0"/></radialGradient></defs><rect width="800" height="460" fill="#050403"/>`;
+ let text='',title=caveRoom===1?t('room1'):t('room2');
+ if(lit){h+=`<path d="M0 460 L0 120 Q200 40 400 70 Q600 40 800 120 L800 460Z" fill="#4A362A"/><rect x="0" y="330" width="800" height="130" fill="#3E2C21"/>`;[[150,180],[650,180]].forEach(([x,y])=>{h+=`<circle cx="${x}" cy="${y}" r="120" fill="url(#tglow)"/><path d="M${x} ${y+40} V${y}" stroke="${INK}" stroke-width="8"/><path d="M${x} ${y} q-12 -16 0 -34 q12 18 0 34Z" fill="#FF8A1F" stroke="${INK}" stroke-width="3"/>`;});}
+ else h+=`<rect width="800" height="460" fill="url(#entr)"/>`;
+ if(caveRoom===1){
+  text=lit?t('lit1'):t('dark1');
+  // túnel en perspectiva: arcos cada vez más oscuros hasta otro hoyo al fondo
+  for(let i=0;i<5;i++){const k=1-i*0.17,w=390*k,hh=270*k,cy=215;h+=`<path d="M${400-w} 460 L${400-w} ${cy+hh*.35} Q${400-w} ${cy-hh} 400 ${cy-hh} Q${400+w} ${cy-hh} ${400+w} ${cy+hh*.35} L${400+w} 460" fill="none" stroke="rgba(130,98,76,${(lit?.9:.42)-i*.08})" stroke-width="${7-i}"/>`;}
+  h+=`<path d="M10 460 L330 250 M790 460 L470 250" stroke="rgba(130,98,76,${lit?.6:.25})" stroke-width="4"/>`;
+  h+=holeSVG(400,200,48,40,t('hole1'),C.estado!=='vencido');
+ }else if(C.estado==='batalla'){
+  title=t('battle');
+  const vida=Math.max(0,Math.min(100,Number(C.vida!=null?C.vida:100)));
+  const fighters=agents.filter(a=>a.jefe||a.role==='cazador').slice(0,6);
+  fighters.forEach((a,i)=>{const o=a.data,x=90+(i%3)*95+(i>2?40:0),y=i>2?430:390;
+   h+=`<g transform="translate(${x},${y}) scale(${a.jefe?1.9:1.6})" class="pelea" style="animation-delay:${(i*0.11).toFixed(2)}s"><g opacity="${lit?1:.62}">${caveman({piel:o.piel,pelo:o.pelo,ropa:o.ropa,largo:o.pelo_largo,jefe:a.jefe,noShadow:true})}</g><path d="M16 -28 L30 -44" stroke="#8A5A2B" stroke-width="3" stroke-linecap="round"/><path d="M30 -44 l4 -7 l-7 3z" fill="#C9BEB0"/></g>`;});
+  h+=`<g transform="translate(620,440)" class="pelea">${creatureSVG(C.amenaza)}</g>`;
+  [[500,250],[560,330],[470,360]].forEach(([x,y],i)=>{h+=`<text class="boom" x="${x}" y="${y}" font-size="44" style="animation-delay:${(i*0.37).toFixed(2)}s">💥</text>`;});
+  h+=`<g transform="translate(470,26)"><text x="0" y="18" style="font:900 15px var(--body);fill:#F6E7C1">${esc(t('life'))}</text><rect x="90" y="4" width="220" height="18" rx="9" fill="#2A1D16" stroke="#F6E7C1" stroke-width="2"/><rect x="92" y="6" width="${(216*vida/100).toFixed(0)}" height="14" rx="7" fill="#E5402A"/></g>`;
+ }else if(C.estado==='vencido'){
+  text=t('won');
+  h+=`<g opacity="${lit?1:.45}"><path d="M330 400 l60 -10 M336 388 l6 24 M384 380 l6 24" stroke="#EDE6DA" stroke-width="8" stroke-linecap="round"/><ellipse cx="460" cy="396" rx="26" ry="16" fill="#EDE6DA"/></g>`;
+ }else{
+  text=t('dark2');
+  h+=`<g transform="translate(590,130)"><g class="ojo"><ellipse cx="0" cy="0" rx="14" ry="10" fill="#FFD23F"/><ellipse cx="44" cy="0" rx="14" ry="10" fill="#FFD23F"/><circle cx="3" cy="1" r="4" fill="#050403"/><circle cx="47" cy="1" r="4" fill="#050403"/></g></g>`;
+  h+=`<g class="ojos2"><g transform="translate(700,330)" opacity=".7"><g class="ojo" style="animation-delay:1.7s"><ellipse cx="0" cy="0" rx="7" ry="5" fill="#E5402A"/><ellipse cx="22" cy="0" rx="7" ry="5" fill="#E5402A"/></g></g></g>`;
+ }
+ const nota=C.nota?L(C.nota):'';
+ if(nota&&caveRoom===2)text=(text?text+' ':'')+nota;
+ cs.setAttribute('viewBox','0 0 800 460');cs.innerHTML=h;
+ $('cave-title').textContent=title;
+ msg.hidden=!text;msg.textContent=text;
+}
+function syncCaveBtns(){$('cave-back').hidden=caveRoom===0;}
+// hoyo en la pared: se ve oscuro (con ojos si algo vive ahí); al tocarlo se entra más adentro
+function holeSVG(cx,cy,rx,ry,label,ojos){
+ return `<g data-deeper="1" role="button" tabindex="0" aria-label="${esc(label)}" style="cursor:pointer">`+
+  `<ellipse cx="${cx}" cy="${cy}" rx="${rx+16}" ry="${ry+13}" fill="#2A1D16" stroke="${INK}" stroke-width="5"/>`+
+  `<ellipse cx="${cx}" cy="${cy}" rx="${rx}" ry="${ry}" fill="#000"/>`+
+  `<path d="M${cx-rx-16} ${cy+4} q8 -10 16 -2 M${cx+rx+2} ${cy-6} q8 -10 14 0" stroke="#5E4535" stroke-width="4" fill="none" stroke-linecap="round"/>`+
+  (ojos?`<g class="ojo" style="animation-delay:.8s"><ellipse cx="${cx-rx*.24}" cy="${cy+ry*.12}" rx="${(rx*.09).toFixed(1)}" ry="${(rx*.065).toFixed(1)}" fill="#FFD23F"/><ellipse cx="${cx+rx*.24}" cy="${cy+ry*.12}" rx="${(rx*.09).toFixed(1)}" ry="${(rx*.065).toFixed(1)}" fill="#FFD23F"/></g>`:'')+
+  `<text class="sign" x="${cx}" y="${cy-ry-26}" text-anchor="middle" style="font-size:22px">${esc(label)}</text></g>`;
+}
 let caveKey='';
 function renderCave(){
  if(!caveOpen)return;
+ syncCaveBtns();
+ if(caveRoom>0){renderDeep();return;}
  const inside=agents.filter(a=>a.p&&a.p.inside);
  const key=LANG+'|'+inside.length+'|'+follow;
  const m=gameMin(Date.now()/1000);const mins=Math.ceil(((NIGHT_START-m)+1440)%1440/1);
@@ -689,7 +763,7 @@ function renderCave(){
  <path d="M30 460 L30 150 Q90 60 230 66 Q400 36 570 66 Q710 60 770 150 L770 460Z" fill="#5E4535"/>
  <path d="M90 140 l20 -10 l14 8 l20 -12 M600 110 l18 -8 l14 10 l22 -8" stroke="#C9884A" stroke-width="5" fill="none" stroke-linecap="round"/>
  <g fill="#C9884A" opacity=".85"><path d="M130 190 q20 -24 52 -10 q16 -16 34 0 l-4 12 l-8 -4 l-2 14 h-8 l-2 -10 h-26 l-2 10 h-8 l-2 -12 q-12 0 -24 0z"/><circle cx="650" cy="180" r="10"/><path d="M640 170 l-6 -12 M650 168 l0 -14 M660 170 l6 -12"/></g>
- <rect x="30" y="300" width="740" height="160" fill="#3E2C21"/>`;
+ <rect x="30" y="300" width="740" height="160" fill="#3E2C21"/>`+holeSVG(400,205,58,48,t('hole0'),!(D.cueva&&D.cueva.estado==='vencido'));
  if(D.fuego)h+=`<circle cx="400" cy="330" r="120" fill="url(#cglow)"/><path d="M400 350 C370 334 380 304 394 286 C396 304 406 308 410 312 C416 296 412 282 420 270 C438 296 434 334 400 350Z" fill="#FF8A1F" stroke="${INK}" stroke-width="3"/>`;
  list.forEach((a,i)=>{
   const c=i%cols,r=Math.floor(i/cols);const x=110+c*(580/Math.max(1,cols-1||1)),y=330+r*58;
@@ -782,6 +856,7 @@ function frame(){
 }
 function updateFeed(ev){
  const ul=$('feed');const rows=[];
+ if(D.cueva&&D.cueva.estado==='batalla')rows.push(`<li class="event"><span class="em" aria-hidden="true">⚔️</span><span>${esc(t('battleFeed'))}</span></li>`);
  if(ev){const k=ev.e<34?'mammoth':(ev.e<58?'carry':'feast');rows.push(`<li class="event"><span class="em" aria-hidden="true">${k==='mammoth'?'🦣':k==='carry'?'💪':'🍖'}</span><span>${esc(t(k).replace(/^\S+\s/,''))}</span></li>`);}
  for(const a of agents){if(!a.user)continue;const tx=actText(a,a.p);if(!tx)continue;rows.push(`<li><span class="em" aria-hidden="true">${tx.em}</span><span>${tx.html}</span></li>`);}
  const html=rows.join('');if(ul._h!==html){ul._h=html;ul.innerHTML=html;}
@@ -834,6 +909,10 @@ function boot(data){
 $('lang-es').addEventListener('click',()=>{LANG='es';try{localStorage.setItem('ttd-lang','es')}catch(e){}caveKey='';applyLang();});
 $('lang-en').addEventListener('click',()=>{LANG='en';try{localStorage.setItem('ttd-lang','en')}catch(e){}caveKey='';applyLang();});
 $('zoomout').addEventListener('click',()=>select(null));
+const goDeeper=()=>{caveRoom=Math.min(2,caveRoom+1);caveKey='';deepKey='';renderCave();};
+$('cavesvg').addEventListener('click',e=>{if(e.target.closest('[data-deeper]'))goDeeper();});
+$('cavesvg').addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.closest('[data-deeper]')){e.preventDefault();goDeeper();}});
+$('cave-back').addEventListener('click',()=>{caveRoom=Math.max(0,caveRoom-1);caveKey='';deepKey='';renderCave();});
 $('cave-close').addEventListener('click',()=>{closeCave();if(follow){const a=agents.find(x=>x.id===follow);if(a&&a.p&&a.p.inside)select(null);}});
 $('feed').addEventListener('click',e=>{const b=e.target.closest('[data-follow]');if(b)select(b.getAttribute('data-follow'),true);});
 $('search-form').addEventListener('submit',e=>{

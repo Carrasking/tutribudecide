@@ -6,6 +6,7 @@
   "aldea": null,
   "era": "piedra",
   "fuego": false,
+  "cueva": { "estado": "oscuro", "amenaza": null, "vida": 100, "nota": null },
   "investigando": { "es": "El fuego", "en": "Fire", "inicio": "2026-11-09", "dias": 7 },
   "votacion": {
     "es": "Día 1: ¿dónde dormimos? 1 = explorar el fondo de la cueva · 2 = construir chozas junto al río. Y sigue abierto el nombre de la tribu.",
