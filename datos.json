@@ -1,134 +1,359 @@
 {
-  "actualizado": "2026-11-09",
-  "dia": 1,
-  "poblacion": 48,
+  "actualizado": "2026-11-10",
+  "dia": 2,
+  "poblacion": 78,
   "tribu": null,
   "aldea": null,
   "era": "piedra",
   "fuego": false,
-  "cueva": { "estado": "oscuro", "amenaza": null, "vida": 100, "nota": null },
-  "investigando": { "es": "El fuego", "en": "Fire", "inicio": "2026-11-09", "dias": 7 },
+  "cueva": {
+    "estado": "oscuro",
+    "amenaza": "oso",
+    "vida": 100,
+    "nota": {
+      "es": "Un oso de las cavernas vive en el fondo. La tribu decide en el video: ¿pelear o tapar el fondo con rocas?",
+      "en": "A cave bear lives at the back. The tribe decides in the video: fight it or wall it off with rocks?"
+    }
+  },
+  "investigando": {
+    "es": "El fuego (¡ya hay chispas con el pedernal!)",
+    "en": "Fire (flint sparks already!)",
+    "inicio": "2026-11-09",
+    "dias": 6
+  },
   "votacion": {
-    "es": "Día 1: ¿dónde dormimos? 1 = explorar el fondo de la cueva · 2 = construir chozas junto al río. Y sigue abierto el nombre de la tribu.",
-    "en": "Day 1: where do we sleep? 1 = explore the back of the cave · 2 = build huts by the river. The tribe name vote is still open.",
+    "es": "Día 2: el oso de la cueva. 1 = pelear contra el oso · 2 = tapar el fondo con rocas. Y sigue abierto el nombre de la tribu.",
+    "en": "Day 2: the cave bear. 1 = fight the bear · 2 = wall off the back with rocks. The tribe name vote is still open.",
     "redes_es": [
-      { "red": "TikTok", "url": "https://www.tiktok.com/@.exzards" },
-      { "red": "Instagram", "url": "https://www.instagram.com/tutribudecide/" },
-      { "red": "YouTube", "url": "https://www.youtube.com/@tutribudecide" }
+      {
+        "red": "TikTok",
+        "url": "https://www.tiktok.com/@.exzards"
+      },
+      {
+        "red": "Instagram",
+        "url": "https://www.instagram.com/tutribudecide/"
+      },
+      {
+        "red": "YouTube",
+        "url": "https://www.youtube.com/@tutribudecide"
+      }
     ],
     "redes_en": [
-      { "red": "TikTok", "url": "https://www.tiktok.com/@.exzards" },
-      { "red": "Instagram", "url": "https://www.instagram.com/yourtribedecides/" },
-      { "red": "YouTube", "url": "https://www.youtube.com/@yourtribedecides" }
+      {
+        "red": "TikTok",
+        "url": "https://www.tiktok.com/@.exzards"
+      },
+      {
+        "red": "Instagram",
+        "url": "https://www.instagram.com/yourtribedecides/"
+      },
+      {
+        "red": "YouTube",
+        "url": "https://www.youtube.com/@yourtribedecides"
+      }
     ],
     "url_es": "https://www.tiktok.com/@.exzards",
     "url_en": "https://www.tiktok.com/@.exzards"
   },
   "tienda": "https://hoo.be/exzards",
   "historia": [
-    { "dia": 0, "es": "Exzards aparece solo en un valle vacío y funda la tribu. Los primeros en comentar se unen.", "en": "Exzards appears alone in an empty valley and founds the tribe. The first commenters join." },
-    { "dia": 1, "es": "Llegan los 18 primeros de la tribu. Nadie gana el nombre todavía y empieza la búsqueda del fuego.", "en": "The first 18 members arrive. No tribe name wins yet, and the search for fire begins." }
-  ],
-  "jefe": { "usuario": "Exzards", "piel": "#F0B088", "pelo": "#5A341C", "ropa": "#9A6232" },
-  "miembros": [
     {
-      "usuario": "germancn__", "rol": "cazador", "desde": 0,
-      "piel": "#C98A5E", "pelo": "#2E1C10", "ropa": "#8C6A3A",
-      "mascota": { "tipo": "tigre", "nombre": "" },
-      "papel": { "es": "Cazador con su tigre dientes de sable", "en": "Hunter with a sabertooth tiger" }
+      "dia": 0,
+      "es": "Exzards aparece solo en un valle vacío y funda la tribu. Los primeros en comentar se unen.",
+      "en": "Exzards appears alone in an empty valley and founds the tribe. The first commenters join."
     },
     {
-      "usuario": "rasche_rena", "rol": "fuego", "desde": 0,
-      "piel": "#F5C9A0", "pelo": "#C0502A", "ropa": "#7E8C3A",
-      "papel": { "es": "Nómada que busca el fuego", "en": "Nomad searching for fire" }
+      "dia": 1,
+      "es": "Llegan los 18 primeros de la tribu. Nadie gana el nombre todavía y empieza la búsqueda del fuego.",
+      "en": "The first 18 members arrive. No tribe name wins yet, and the search for fire begins."
     },
     {
-      "usuario": "j8menezluquina8ciakassandra", "rol": "hogar", "desde": 0, "pelo_largo": true,
-      "piel": "#E8A87C", "pelo": "#1E120A", "ropa": "#B5783E",
-      "mascota": { "tipo": "perro", "nombre": "Canelita" }, "casa": true,
-      "papel": { "es": "Vive en su choza con su perrita Canelita", "en": "Lives in a hut with a pup named Canelita" }
-    },
-    {
-      "usuario": "qwerty983251", "rol": "agua", "desde": 0,
-      "piel": "#D9966A", "pelo": "#3B2414", "ropa": "#6E8FA8",
-      "papel": { "es": "Trae agua del río. Propuso el nombre «Los Invencibles»", "en": "Brings water from the river. Suggested the name «Los Invencibles»" }
-    },
-    {
-      "usuario": "el_tiziano_2026", "rol": "bayas", "desde": 0,
-      "piel": "#F2B38A", "pelo": "#7A4A22", "ropa": "#A0522D",
-      "papel": { "es": "Recolector de bayas. Propuso el nombre «Los Picardos» para la aldea", "en": "Berry gatherer. Suggested «Los Picardos» as the village name" }
-    },
-    {
-      "usuario": "el.dante2.0", "rol": "piedras", "desde": 0,
-      "piel": "#E2A47A", "pelo": "#3B2414", "ropa": "#8E8A82",
-      "papel": { "es": "Junta piedras para las herramientas. Propuso el nombre «Cejas YT»", "en": "Gathers stones for tools. Suggested the name «Cejas YT»" }
-    },
-    {
-      "usuario": "777_chati_cr_23", "rol": "cazador", "desde": 0,
-      "piel": "#C98A5E", "pelo": "#4A2C17", "ropa": "#E07A2A",
-      "mascota": { "tipo": "tigre", "nombre": "", "bebe": true },
-      "papel": { "es": "Cazador con su cachorro de dientes de sable", "en": "Hunter with a sabertooth cub" }
-    },
-    {
-      "usuario": "marrmarr556", "rol": "bayas", "desde": 0,
-      "piel": "#F5C9A0", "pelo": "#6B3A1E", "ropa": "#A0522D",
-      "papel": { "es": "Recolecta bayas. De los primeros en seguir a la tribu", "en": "Picks berries. One of the very first followers" }
-    },
-    {
-      "usuario": "bannana7-k", "rol": "agua", "desde": 0,
-      "piel": "#D9966A", "pelo": "#2E1C10", "ropa": "#4A7FB0",
-      "papel": { "es": "Trae agua del río", "en": "Brings water from the river" }
-    },
-    {
-      "usuario": "jum-v7j", "rol": "bayas", "desde": 0,
-      "piel": "#F0B088", "pelo": "#8A4A22", "ropa": "#4A7FB0",
-      "papel": { "es": "Recolecta bayas", "en": "Picks berries" }
-    },
-    {
-      "usuario": "Br0ken_sp5wn", "rol": "agua", "desde": 0,
-      "piel": "#C98A5E", "pelo": "#1E120A", "ropa": "#8E8A82",
-      "papel": { "es": "Trae agua del río", "en": "Brings water from the river" }
-    },
-    {
-      "usuario": "DEKU-c9z", "rol": "bayas", "desde": 0,
-      "piel": "#E8A87C", "pelo": "#1E120A", "ropa": "#7A5A32",
-      "papel": { "es": "Recolecta bayas. Propuso «La Tribu de los Leones»", "en": "Picks berries. Suggested «La Tribu de los Leones»" }
-    },
-    {
-      "usuario": "juanfer0138", "rol": "piedras", "desde": 0,
-      "piel": "#F2B38A", "pelo": "#3B2414", "ropa": "#E07A2A",
-      "mascota": { "tipo": "loro", "nombre": "" },
-      "papel": { "es": "Junta piedras con su loro", "en": "Gathers stones with their parrot" }
-    },
-    {
-      "usuario": "noob6-y8h", "rol": "cazador", "desde": 0,
-      "piel": "#D9966A", "pelo": "#5A341C", "ropa": "#4A7FB0",
-      "mascota": { "tipo": "mamut", "nombre": "" },
-      "papel": { "es": "Cazador con su mamut bebé. Su humilde choza es el suelo", "en": "Hunter with a baby mammoth. Their humble hut is the ground" }
-    },
-    {
-      "usuario": "Leila.alegriaAlegria", "rol": "piedras", "desde": 0,
-      "piel": "#F5C9A0", "pelo": "#7A4A22", "ropa": "#8E8A82",
-      "mascota": { "tipo": "trex", "nombre": "" },
-      "papel": { "es": "«El Grasa». Junta piedras con su T-rex bebé", "en": "«El Grasa». Gathers stones with a baby T-rex" }
-    },
-    {
-      "usuario": "DLS_omarc78", "rol": "cazador", "desde": 0,
-      "piel": "#C98A5E", "pelo": "#2E1C10", "ropa": "#A0522D",
-      "mascota": { "tipo": "lobo", "nombre": "Zeus" },
-      "papel": { "es": "Cazador con su lobo Zeus. Lo encontró cazando. Propuso «Generación Z»", "en": "Hunter with a wolf named Zeus, found while hunting. Suggested «Generación Z»" }
-    },
-    {
-      "usuario": "ThiagoPeña-q5c", "rol": "agua", "desde": 0,
-      "piel": "#E2A47A", "pelo": "#4A2C17", "ropa": "#4A7FB0",
-      "papel": { "es": "Trae agua del río", "en": "Brings water from the river" }
-    },
-    {
-      "usuario": "cuydoro", "rol": "bayas", "desde": 0, "pelo_largo": true,
-      "piel": "#F0B088", "pelo": "#6B3A1E", "ropa": "#8E8A82",
-      "mascota": { "tipo": "gato", "nombre": "Leo" },
-      "papel": { "es": "Recolecta bayas con su gato montés Leo", "en": "Picks berries with a wildcat named Leo" }
+      "dia": 2,
+      "es": "La tribu exploró el fondo de la cueva y encontró un oso de las cavernas. Al huir, rasche_rena halló pedernal: ¡ya hay chispas! Llega yaniicarrasco, la sabia.",
+      "en": "The tribe explored the back of the cave and found a cave bear. Running away, rasche_rena found flint: sparks at last! yaniicarrasco, the sage, arrives."
     }
   ],
-  "aldeanos_genericos": 29
+  "jefe": {
+    "usuario": "Exzards",
+    "piel": "#F0B088",
+    "pelo": "#5A341C",
+    "ropa": "#9A6232"
+  },
+  "miembros": [
+    {
+      "usuario": "germancn__",
+      "rol": "cazador",
+      "desde": 0,
+      "piel": "#C98A5E",
+      "pelo": "#2E1C10",
+      "ropa": "#8C6A3A",
+      "mascota": {
+        "tipo": "tigre",
+        "nombre": ""
+      },
+      "papel": {
+        "es": "Cazador con su tigre dientes de sable",
+        "en": "Hunter with a sabertooth tiger"
+      }
+    },
+    {
+      "usuario": "rasche_rena",
+      "rol": "fuego",
+      "desde": 0,
+      "piel": "#F5C9A0",
+      "pelo": "#C0502A",
+      "ropa": "#7E8C3A",
+      "papel": {
+        "es": "Nómada que busca el fuego. Encontró pedernal en la cueva",
+        "en": "Nomad searching for fire. Found flint in the cave"
+      }
+    },
+    {
+      "usuario": "j8menezluquina8ciakassandra",
+      "rol": "hogar",
+      "desde": 0,
+      "pelo_largo": true,
+      "piel": "#E8A87C",
+      "pelo": "#1E120A",
+      "ropa": "#B5783E",
+      "mascota": {
+        "tipo": "perro",
+        "nombre": "Canelita"
+      },
+      "casa": true,
+      "papel": {
+        "es": "Vive en su choza con su perrita Canelita",
+        "en": "Lives in a hut with a pup named Canelita"
+      }
+    },
+    {
+      "usuario": "qwerty983251",
+      "rol": "agua",
+      "desde": 0,
+      "piel": "#D9966A",
+      "pelo": "#3B2414",
+      "ropa": "#4F8FD6",
+      "papel": {
+        "es": "Trae agua del río con su gatito Patitas Peludas. Propuso «Los Invencibles»",
+        "en": "Brings water from the river with a kitten named Patitas Peludas. Suggested «Los Invencibles»"
+      },
+      "mascota": {
+        "tipo": "gato",
+        "nombre": "Patitas Peludas"
+      }
+    },
+    {
+      "usuario": "el_tiziano_2026",
+      "rol": "bayas",
+      "desde": 0,
+      "piel": "#F2B38A",
+      "pelo": "#7A4A22",
+      "ropa": "#A0522D",
+      "papel": {
+        "es": "Recolector de bayas. Propuso el nombre «Los Picardos» para la aldea",
+        "en": "Berry gatherer. Suggested «Los Picardos» as the village name"
+      }
+    },
+    {
+      "usuario": "el.dante2.0",
+      "rol": "piedras",
+      "desde": 0,
+      "piel": "#E2A47A",
+      "pelo": "#3B2414",
+      "ropa": "#8E8A82",
+      "papel": {
+        "es": "Junta piedras para las herramientas. Propuso el nombre «Cejas YT»",
+        "en": "Gathers stones for tools. Suggested the name «Cejas YT»"
+      }
+    },
+    {
+      "usuario": "777_chati_cr_23",
+      "rol": "cazador",
+      "desde": 0,
+      "piel": "#C98A5E",
+      "pelo": "#4A2C17",
+      "ropa": "#E07A2A",
+      "mascota": {
+        "tipo": "tigre",
+        "nombre": "",
+        "bebe": true
+      },
+      "papel": {
+        "es": "Cazador con su cachorro de dientes de sable",
+        "en": "Hunter with a sabertooth cub"
+      }
+    },
+    {
+      "usuario": "marrmarr556",
+      "rol": "bayas",
+      "desde": 0,
+      "piel": "#F5C9A0",
+      "pelo": "#6B3A1E",
+      "ropa": "#A0522D",
+      "papel": {
+        "es": "Recolecta bayas. De los primeros en seguir a la tribu",
+        "en": "Picks berries. One of the very first followers"
+      }
+    },
+    {
+      "usuario": "bannana7-k",
+      "rol": "agua",
+      "desde": 0,
+      "piel": "#D9966A",
+      "pelo": "#2E1C10",
+      "ropa": "#4A7FB0",
+      "papel": {
+        "es": "Trae agua del río",
+        "en": "Brings water from the river"
+      }
+    },
+    {
+      "usuario": "jum-v7j",
+      "rol": "bayas",
+      "desde": 0,
+      "piel": "#F0B088",
+      "pelo": "#8A4A22",
+      "ropa": "#4A7FB0",
+      "papel": {
+        "es": "Recolecta bayas",
+        "en": "Picks berries"
+      }
+    },
+    {
+      "usuario": "Br0ken_sp5wn",
+      "rol": "agua",
+      "desde": 0,
+      "piel": "#C98A5E",
+      "pelo": "#1E120A",
+      "ropa": "#8E8A82",
+      "papel": {
+        "es": "Trae agua del río",
+        "en": "Brings water from the river"
+      }
+    },
+    {
+      "usuario": "DEKU-c9z",
+      "rol": "madera",
+      "desde": 0,
+      "piel": "#E8A87C",
+      "pelo": "#1E120A",
+      "ropa": "#7A5A32",
+      "papel": {
+        "es": "Junta madera en el bosque. Propuso «La Tribu de los Leones»",
+        "en": "Gathers wood in the forest. Suggested «La Tribu de los Leones»"
+      }
+    },
+    {
+      "usuario": "juanfer0138",
+      "rol": "piedras",
+      "desde": 0,
+      "piel": "#F2B38A",
+      "pelo": "#3B2414",
+      "ropa": "#E07A2A",
+      "mascota": {
+        "tipo": "loro",
+        "nombre": ""
+      },
+      "papel": {
+        "es": "Junta piedras con su loro",
+        "en": "Gathers stones with their parrot"
+      }
+    },
+    {
+      "usuario": "noob6-y8h",
+      "rol": "cazador",
+      "desde": 0,
+      "piel": "#D9966A",
+      "pelo": "#5A341C",
+      "ropa": "#4A7FB0",
+      "mascota": {
+        "tipo": "mamut",
+        "nombre": ""
+      },
+      "papel": {
+        "es": "Cazador con su mamut bebé. Su humilde choza es el suelo",
+        "en": "Hunter with a baby mammoth. Their humble hut is the ground"
+      }
+    },
+    {
+      "usuario": "Leila.alegriaAlegria",
+      "rol": "piedras",
+      "desde": 0,
+      "piel": "#F5C9A0",
+      "pelo": "#7A4A22",
+      "ropa": "#8E8A82",
+      "mascota": {
+        "tipo": "trex",
+        "nombre": ""
+      },
+      "papel": {
+        "es": "«El Grasa». Junta piedras con su T-rex bebé",
+        "en": "«El Grasa». Gathers stones with a baby T-rex"
+      }
+    },
+    {
+      "usuario": "DLS_omarc78",
+      "rol": "cazador",
+      "desde": 0,
+      "piel": "#C98A5E",
+      "pelo": "#2E1C10",
+      "ropa": "#A0522D",
+      "mascota": {
+        "tipo": "lobo",
+        "nombre": "Zeus"
+      },
+      "papel": {
+        "es": "Cazador con su lobo Zeus. Lo encontró cazando. Propuso «Generación Z»",
+        "en": "Hunter with a wolf named Zeus, found while hunting. Suggested «Generación Z»"
+      }
+    },
+    {
+      "usuario": "ThiagoPeña-q5c",
+      "rol": "agua",
+      "desde": 0,
+      "piel": "#E2A47A",
+      "pelo": "#4A2C17",
+      "ropa": "#4A7FB0",
+      "papel": {
+        "es": "Trae agua del río",
+        "en": "Brings water from the river"
+      }
+    },
+    {
+      "usuario": "cuydoro",
+      "rol": "bayas",
+      "desde": 0,
+      "pelo_largo": true,
+      "piel": "#F0B088",
+      "pelo": "#6B3A1E",
+      "ropa": "#8E8A82",
+      "mascota": {
+        "tipo": "gato",
+        "nombre": "Leo"
+      },
+      "papel": {
+        "es": "Recolecta bayas con su gato montés Leo",
+        "en": "Picks berries with a wildcat named Leo"
+      }
+    },
+    {
+      "usuario": "yaniicarrasco",
+      "rol": "sabia",
+      "desde": 2,
+      "pelo_largo": true,
+      "piel": "#F5C9A0",
+      "pelo": "#3B2414",
+      "ropa": "#D9A62E",
+      "mascota": {
+        "tipo": "buho",
+        "nombre": "Hedwig"
+      },
+      "casa": true,
+      "papel": {
+        "es": "La sabia de la aldea: lee las estrellas, con su búho Hedwig y su choza",
+        "en": "The village sage: reads the stars, with an owl named Hedwig and a hut"
+      }
+    }
+  ],
+  "aldeanos_genericos": 58
 }
