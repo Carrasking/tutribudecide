@@ -1,29 +1,29 @@
 {
-  "actualizado": "2026-11-10",
-  "dia": 2,
-  "poblacion": 78,
-  "tribu": null,
+  "actualizado": "2026-11-13",
+  "dia": 3,
+  "poblacion": 91,
+  "tribu": "Garra de Fuego",
   "aldea": null,
   "era": "piedra",
-  "fuego": false,
+  "fuego": true,
   "cueva": {
-    "estado": "oscuro",
+    "estado": "vencido",
     "amenaza": "oso",
-    "vida": 100,
+    "vida": 0,
     "nota": {
-      "es": "Un oso de las cavernas vive en el fondo. La tribu decide en el video: ¿pelear o tapar el fondo con rocas?",
-      "en": "A cave bear lives at the back. The tribe decides in the video: fight it or wall it off with rocks?"
+      "es": "Con antorchas y lanzas, la tribu espantó al oso: huyó por un túnel del fondo. ¿Lo seguimos? La tribu lo decide en el video.",
+      "en": "With torches and spears, the tribe scared the bear off: it ran through a tunnel at the back. Follow it? The tribe decides in the video."
     }
   },
   "investigando": {
-    "es": "El fuego (¡ya hay chispas con el pedernal!)",
-    "en": "Fire (flint sparks already!)",
-    "inicio": "2026-11-09",
-    "dias": 6
+    "es": "Ropa de pieles (yaniicarrasco vio en las estrellas un invierno muy frío)",
+    "en": "Fur clothes (yaniicarrasco saw a very cold winter in the stars)",
+    "inicio": "2026-11-13",
+    "dias": 7
   },
   "votacion": {
-    "es": "Día 2: el oso de la cueva. 1 = pelear contra el oso · 2 = tapar el fondo con rocas. Y sigue abierto el nombre de la tribu.",
-    "en": "Day 2: the cave bear. 1 = fight the bear · 2 = wall off the back with rocks. The tribe name vote is still open.",
+    "es": "Día 3: el túnel del oso. 1 = seguir el túnel del oso · 2 = quedarnos y prepararnos para el invierno.",
+    "en": "Day 3: the bear's tunnel. 1 = follow the bear's tunnel · 2 = stay and get ready for winter.",
     "redes_es": [
       {
         "red": "TikTok",
@@ -71,6 +71,11 @@
       "dia": 2,
       "es": "La tribu exploró el fondo de la cueva y encontró un oso de las cavernas. Al huir, rasche_rena halló pedernal: ¡ya hay chispas! Llega yaniicarrasco, la sabia.",
       "en": "The tribe explored the back of the cave and found a cave bear. Running away, rasche_rena found flint: sparks at last! yaniicarrasco, the sage, arrives."
+    },
+    {
+      "dia": 3,
+      "es": "¡rasche_rena prendió el fuego dos días antes! Con antorchas y lanzas, la tribu espantó al oso y la cueva es suya. La tribu se llama Garra de Fuego. yaniicarrasco anuncia un invierno muy frío.",
+      "en": "rasche_rena made fire two days early! With torches and spears, the tribe scared off the bear and the cave is theirs. The tribe is now called Garra de Fuego. yaniicarrasco foresees a very cold winter."
     }
   ],
   "jefe": {
@@ -104,8 +109,8 @@
       "pelo": "#C0502A",
       "ropa": "#7E8C3A",
       "papel": {
-        "es": "Nómada que busca el fuego. Encontró pedernal en la cueva",
-        "en": "Nomad searching for fire. Found flint in the cave"
+        "es": "Nómada que descubrió el fuego con el pedernal de la cueva",
+        "en": "Nomad who discovered fire with flint from the cave"
       }
     },
     {
@@ -355,5 +360,5 @@
       }
     }
   ],
-  "aldeanos_genericos": 58
+  "aldeanos_genericos": 71
 }
