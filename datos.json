@@ -1,7 +1,7 @@
 {
- "actualizado": "2026-11-15",
- "dia": 4,
- "poblacion": 100,
+ "actualizado": "2026-11-17",
+ "dia": 5,
+ "poblacion": 106,
  "tribu": "Garra de Fuego",
  "aldea": null,
  "era": "piedra",
@@ -11,19 +11,19 @@
   "amenaza": "oso",
   "vida": 0,
   "nota": {
-   "es": "La tribu siguió el túnel del oso y encontró una cueva escondida con niko__almunatrr y un huevo gigante de dinosaurio. Al otro lado del túnel ya cae nieve.",
-   "en": "The tribe followed the bear's tunnel and found a hidden cave with niko__almunatrr and a giant dinosaur egg. On the other side of the tunnel, snow is already falling."
+   "es": "El huevo de niko__almunatrr eclosionó junto a la fogata: nació un T-rex bebé rojo. Esa noche aparecieron huellas gigantes en la nieve alrededor de la aldea: la mamá T-rex sigue el rastro.",
+   "en": "niko__almunatrr's egg hatched by the campfire: a red baby T-rex was born. That night, giant footprints appeared in the snow around the village: the mother T-rex is following the trail."
   }
  },
  "investigando": {
-  "es": "Ropa de pieles (yaniicarrasco: el invierno llega en 5 días)",
-  "en": "Fur clothes (yaniicarrasco: winter arrives in 5 days)",
+  "es": "Ropa de pieles (yaniicarrasco: el invierno llega en 3 días)",
+  "en": "Fur clothes (yaniicarrasco: winter arrives in 3 days)",
   "inicio": "2026-11-13",
   "dias": 7
  },
  "votacion": {
-  "es": "Día 4: el huevo de dinosaurio. 1 = llevar el huevo a la fogata · 2 = cuidarlo en su nido.",
-  "en": "Day 4: the dinosaur egg. 1 = bring the egg to the campfire · 2 = guard it in its nest.",
+  "es": "Día 5: la mamá T-rex sigue el rastro. 1 = esconder al bebé en la cueva · 2 = rodear la aldea con antorchas.",
+  "en": "Day 5: the mother T-rex is following the trail. 1 = hide the baby in the cave · 2 = surround the village with torches.",
   "redes_es": [
    {
     "red": "TikTok",
@@ -81,6 +81,11 @@
    "dia": 4,
    "es": "La tribu siguió el túnel del oso y encontró a niko__almunatrr con la ropa rasgada y un huevo gigante de dinosaurio: espantó al oso y salvó el huevo. Al otro lado del túnel ya cae nieve. ¡Ya somos 100!",
    "en": "The tribe followed the bear's tunnel and found niko__almunatrr with torn clothes and a giant dinosaur egg: they scared off the bear and saved the egg. On the other side of the tunnel, snow is already falling. We're 100 strong!"
+  },
+  {
+   "dia": 5,
+   "es": "El huevo eclosionó junto a la fogata: ¡nació un T-rex bebé rojo! Lo primero que vio fue a niko__almunatrr y ahora cree que es su mamá: será el guardián de Garra de Fuego. Pero esa noche aparecieron huellas gigantes alrededor de la aldea. ¡Ya somos 106!",
+   "en": "The egg hatched by the campfire: a red baby T-rex was born! The first thing it saw was niko__almunatrr, and now it thinks they're its mom: it will be the guardian of Garra de Fuego. But that night, giant footprints appeared around the village. We're 106 strong!"
   }
  ],
  "jefe": {
@@ -372,10 +377,15 @@
    "pelo": "#6E3B1C",
    "ropa": "#98A3AD",
    "papel": {
-    "es": "Cazador con la ropa rasgada. Salvó del oso un huevo gigante de dinosaurio",
-    "en": "Hunter with torn clothes. Saved a giant dinosaur egg from the bear"
+    "es": "Cazador con la ropa rasgada y su T-rex bebé rojo, que cree que es su mamá. Futuro guardián de la tribu",
+    "en": "Hunter with torn clothes and a red baby T-rex that thinks they're its mom. The tribe's future guardian"
+   },
+   "mascota": {
+    "tipo": "trex",
+    "nombre": "",
+    "rojo": true
    }
   }
  ],
- "aldeanos_genericos": 79
+ "aldeanos_genericos": 85
 }
