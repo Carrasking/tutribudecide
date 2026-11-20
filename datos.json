@@ -1,6 +1,6 @@
 {
- "actualizado": "2026-11-17",
- "dia": 5,
+ "actualizado": "2026-11-20",
+ "dia": 6,
  "poblacion": 106,
  "tribu": "Garra de Fuego",
  "aldea": null,
@@ -11,19 +11,19 @@
   "amenaza": "oso",
   "vida": 0,
   "nota": {
-   "es": "El huevo de niko__almunatrr eclosionó junto a la fogata: nació un T-rex bebé rojo. Esa noche aparecieron huellas gigantes en la nieve alrededor de la aldea: la mamá T-rex sigue el rastro.",
-   "en": "niko__almunatrr's egg hatched by the campfire: a red baby T-rex was born. That night, giant footprints appeared in the snow around the village: the mother T-rex is following the trail."
+   "es": "La mamá T-rex llegó a medianoche, vio las antorchas, rugió y no entró. Miró a su bebé, que dormía con niko__almunatrr, y se fue a la tormenta. La tribu quemó casi toda la leña del invierno.",
+   "en": "The mother T-rex came at midnight, saw the torches, roared and did not come in. She looked at her baby, asleep with niko__almunatrr, and walked off into the storm. The tribe burned almost all its winter firewood."
   }
  },
  "investigando": {
-  "es": "Ropa de pieles (yaniicarrasco: el invierno llega en 3 días)",
-  "en": "Fur clothes (yaniicarrasco: winter arrives in 3 days)",
-  "inicio": "2026-11-13",
+  "es": "Hacha de piedra (para cortar leña)",
+  "en": "Stone axe (to chop firewood)",
+  "inicio": "2026-11-20",
   "dias": 7
  },
  "votacion": {
-  "es": "Día 5: la mamá T-rex sigue el rastro. 1 = esconder al bebé en la cueva · 2 = rodear la aldea con antorchas.",
-  "en": "Day 5: the mother T-rex is following the trail. 1 = hide the baby in the cave · 2 = surround the village with torches.",
+  "es": "Día 6: sin leña, las antorchas se apagan esta noche. 1 = devolver el bebé a su mamá · 2 = ir al bosque nevado por leña.",
+  "en": "Day 6: without firewood, the torches go out tonight. 1 = give the baby back to its mother · 2 = go to the snowy forest for firewood.",
   "redes_es": [
    {
     "red": "TikTok",
@@ -86,6 +86,11 @@
    "dia": 5,
    "es": "El huevo eclosionó junto a la fogata: ¡nació un T-rex bebé rojo! Lo primero que vio fue a niko__almunatrr y ahora cree que es su mamá: será el guardián de Garra de Fuego. Pero esa noche aparecieron huellas gigantes alrededor de la aldea. ¡Ya somos 106!",
    "en": "The egg hatched by the campfire: a red baby T-rex was born! The first thing it saw was niko__almunatrr, and now it thinks they're its mom: it will be the guardian of Garra de Fuego. But that night, giant footprints appeared around the village. We're 106 strong!"
+  },
+  {
+   "dia": 6,
+   "es": "La mamá T-rex llegó a medianoche, pero vio las antorchas, rugió y no se atrevió a entrar; miró a su bebé y se fue a la tormenta. Llegó el invierno y la ropa de pieles quedó lista justo a tiempo. Pero se acabó casi toda la leña.",
+   "en": "The mother T-rex came at midnight, but saw the torches, roared and did not dare come in; she looked at her baby and left into the storm. Winter arrived and the fur clothes were ready just in time. But almost all the firewood is gone."
   }
  ],
  "jefe": {
